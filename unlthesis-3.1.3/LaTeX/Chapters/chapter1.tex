@@ -13,15 +13,28 @@
 
 \section{Context}
 
-Although during conversations major attention is given to the spoken content, non-verbal communication processing occurs subconsciously. Besides the verbal content of speech, it contains also non-verbal elements known as paralanguage: voice quality, rate, pitch, volume, and speaking style, prosodic features such as rhythm, intonation, and stress. But there are additional visual cues part of the non-verbal communication which in total make two thirds of communication, namely, body language (kinesics), distance (proxemics), oculesics (eye contact, patterns of fixation, etc.), and touch (haptics)\cite{Burgoon2016}.
+Although during conversations major attention is given to the spoken content, non-verbal communication processing occurs subconsciously. Besides the verbal content of speech, it contains also non-verbal elements known as paralanguage: voice quality, rate, pitch, volume, and speaking style, prosodic features such as rhythm, intonation, and stress. But there are additional visual cues part of the non-verbal communication, namely, body language (kinesics), distance (proxemics), oculesics (eye contact, patterns of fixation, etc.), and touch. Together with paralanguage, non-verbal communication make two thirds of communication (haptics)\cite{Burgoon2016}.
 
 As such an important part of communication is visual the goal of this thesis is to collect RGB and depth video data related to communication, analyze and detect different communication features by applying image processing techniques as well as machine learning. For that purpose different study cases have been carefully selected:
 \begin{enumerate}
     \item \textbf{Speech and Language Therapy}: evaluation of oromotoric exercises performed by children with lisp problems in context of the project BioVisualSpeech.
     \item \textbf{Affective computing}: detecting and recognizing emotional state of humans.
-    \item \textbf{Facial paralysis}: detect and qualify the severity of facial paralysis.
+    \item \textbf{Facial paralysis}: detect and qualify the severity of facial paralysis \cite{Ngo2016}\cite{Sundaraj2012}.
 \end{enumerate}
 
+Study case 1) is part of an international project called BioVisualSpeech in which this thesis is part of. In Fig.\ref{fig:project} an overview of the project, which aims to collect data from children with speech disorders, is provided. The project is composed by three main components: a) data acquisition using interactive games, b) Data analysis, c) health information system. The goal of BioVisualSpeech is to develop a system that is composed by the three mentioned components in order to support speech therapists (more details in chapter \ref{sec:motivation}). During this thesis the focus lies on RGB and depth video processing, annotation extraction and development of a system which uses machine learning techniques to find similar patients and suggest therapy exercises. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=13cm]{diagramProject.pdf}
+    \caption{Overview of the project BioVisualSpeech.}
+    \label{fig:project}
+\end{figure}
+\todo{Figure:  legend to indicate what colors mean. keep frame color for main project parts as well as title font the same.Include all partners of the project}
+
+Study case 2) was chosen as several datasets for expression detection are available and a taxonomy for facial movements is available in this area. As in study case 1) also facial movements have to be extracted and represented, the goal is to learn the state-of-the-art in expression detection in order to apply it to study case 1).
+
+Study case 3) is similar to study case 1) with the difference that there is no pathology concerning speech, but a facial paralysis which requires physiotherapy during several weeks. 
 
 All three study cases have in common the video analysis of facial activity over a temporal window and it is expected that the same image processing and machine learning tools can be applied. In the following subchapters the motivation and impact will be described.  
 
@@ -31,6 +44,7 @@ All three study cases have in common the video analysis of facial activity over 
 
 \section{Motivation} % (fold)
 \label{sec:motivation}
+- define quantitative measures for SLT
 
 - multimodal time series of observations\\
 - clinical medical data consisting of \\
@@ -41,7 +55,7 @@ Use non-verbal communication to understand the engagement during exercises.\\
 
 verbal and non-verbal communication go hand in hand.
 - say that I want to apply my work for different case studies (different diseases, several persons).\\
--search article: quantitiative assessment of bell's parsy using binary patterns. (google drive)\\
+-search article: quantitative assessment of bell's parsy using binary patterns. (google drive)\\
 - objective grading of facial paralysis...(google drive)
 
 ----Thoughts 20.04.17:\\
