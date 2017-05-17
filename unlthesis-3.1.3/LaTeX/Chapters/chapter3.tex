@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% chapter3.tex
+%% UNL thesis document file
+%%
+%% Chapter with a short laext tutorial and examples
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{State Of the Art}
+\label{cha:stateofart}
+
+\section{Audio-Visual Speech Recognition}
+
+
+\section{Lip-Reading}
+
+\section{Affective Computing}
+
+
+
+
+
+
+\section{Methods and algorithms that address similar problems} % (fold)
+
+Behavioral signal processing: \\
+from \url{http://people.csail.mit.edu/jrg/meetings/2016-Feb8-ShriN.pdf}\\
+\begin{itemize}
+    \item computing behavioral traits \& states for decision making and action
+    \item help do things we know to do well more efficiently, consistently
+    \item help handle new data, create new models to offer unimagined insights: create tools for discovery
+    \item FOCUS OF THE TALK ON SPEECH AND SPOKEN LANGUAGE CUES
+    \item HEALTH \& WELL BEING APPLICATIONS
+\end{itemize}
+
+see graph with applications domains\\
+combination of vocal, language, and visual behavioral cues\\
+ex. see uncertainty vs certainty\\
+frequent application: 
+\begin{itemize}
+    \item marital therapy $\rightarrow$ characterizing affective dynamics, humor, blame patterns
+    \item Autism spectrum disorders $\rightarrow$ technologies for rich understanding of expressive behavior and interaction
+\end{itemize}
+
+Multimodal behavior signals:\\
+\begin{itemize}
+    \item Provide a window into internal state \& processes $\rightarrow$ Some overly expressed and directly observable (e.g., vocal and facial expressions, body posture)
+$\rightarrow$ Others, covert
+(e.g., heart rate, electrodermal response, brain activity) 
+    \item Implications for understanding $\rightarrow$ Human information encoding and decoding $\rightarrow$ “Mind-Body” relations
+$\rightarrow$ People’s judgment of others behavior
+    \item MEASURING \& QUANTIFYING HUMAN BEHAVIOR: A CHALLENGING ENGINEERING PROBLEM
+\end{itemize}
+
+
+
+
+Some papers
+
+\begin{itemize}
+    \item Learning to diagnose with LSTM recurrent neural networks
+    \item Deep Patient: an unsupervised representation to predict the future of patients from the electronic health records
+\end{itemize}
+
+
+
+% \subsection{Inserting Figures Wrapped with text} % (fold)
+% \label{ssec:inserting_images_wrapped_with_text}
+% 
+% You should only use this feature is \emph{really} necessary. This means, you have a very small image, that will look lonely just with text above and below.
+% 
+% In this case, you must use the \verb!wrapfiure! package.  To use \verb!wrapfig!, you must first add this to the preamble:
+% 
+% \begin{wrapfigure}{l}{2.5cm}
+%   \centering
+%     \includegraphics[width=2cm]{snowman-vectorial}
+%   \caption{A snow-man}
+% \end{wrapfigure}	
+% 
+% \noindent\verb!\usepackage{wrapfig}!\\
+% This then gives you access to:\\
+% \verb!\begin{wrapfigure}[lineheight]{alignment}{width}!\\
+% Alignment can normally be either ``l'' for left, or ``r'' for right. Lowercase ``l'' or ``r'' forces the figure to start precisely where specified (and may cause it to run over page breaks), while capital ``L'' or ``R'' allows the figure to float. If you defined your document as twosided, the alignment can also be ``i'' for inside or ``o'' for outside, as well as ``I'' or ``O''. The width is obviously the width of the figure. The example above was introduced with:
+% \lstset{language=TeX, morekeywords={\begin,\includegraphics,\caption}, caption=Wrapfig Example, label=lst:latex_example}
+% \begin{lstlisting}
+% 	\begin{wrapfigure}{l}{2.5cm}
+% 	  \centering
+% 	    \includegraphics[width=2cm]{snowman-vectorial}
+% 	  \caption{A snow-man}
+% 	\end{wrapfigure}	
+% \end{lstlisting}
+
+% subsection inserting_images_wrapped_with_text (end)
+
+% section floats_figures_and_captions (end)
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comments
+\begin{comment}
+\begin{figure}[htbp]
+\centering
+ \subbottom[One sub-figure]{%
+    \includegraphics[width=0.5\linewidth]{knitting-vectorial}}%
+ \subbottom[Another sub-figure]{%
+    \includegraphics[width=0.5\linewidth]{knitting-vectorial}}
+\caption{A figure with two sub-figures!}
+\label{fig:fig2subfig}
+\end{figure}
+
+
+
+
+
+
+
+\newpage
+
+{\Large To be included in the sections above}\\
+
+Para fazer citações, deverá usar-se a chave da referência no ficheiro BibTeX. Se for uma única referência~\cite{Artho04}, usar um ``\verb!~!'' para ligar o \verb!\cite{...}! à palavra que o precede (\ldots\verb!referência~\cite{Artho04}!).  Caso queira fazer múltiplas citações~\cite{Shavit95,Silberschatz06,Moss85}, deverá agrupá-las dentro de um úinico \verb!\cite{...}!.
+
+Note que o ficheiro de bibliografia pode ter tantas entradas quantas quiser. Apenas aquelas cuja chave seja referenciada no texto é que serão incluidas na listagem de bibliografia.
+
+
+Footnotes\footnote{This is a simple footnote.} will be numbered and shown in the bottom of the page.
+
+
+A Tabela~\ref{tab:hla:results} ilustra alguns conceitos importantes associados à contrução de tabelas:
+\begin{asparaenum}[i)]
+	\item Não usar linhas verticais;
+	\item A legenda deve ficar por cima da tabela;
+	\item Usar as macros \verb!\toprule!, \verb!\midrule! e \verb!\bottomrule! para fazer a linha horizontal superior, interiores e inferior, respectivamente.
+\end{asparaenum}
+ 
+\begin{table}[ht]
+	\caption{Test results summary.}
+	\label{tab:hla:results}
+\centering
+\begin{tabular}{lccccc}
+	\toprule
+	\multicolumn{1}{c}{\textbf{Test}} 	& \textbf{Anomalies}	& \textbf{Warnings}	& \textbf{Correct} 	& \textbf{Categories}		& \textbf{Missed} \\
+	\midrule
+\cite{Beckman08}~Connection 	& 2 & 2	& 1	& \emph{C}				& 1 \\
+\cite{Artho03}~Coordinates'03 	& 1	& 4	& 1	& \emph{2B, 1C}			& 0 \\
+\cite{Artho03}~Local Variable	& 1	& 2	& 1	& \emph{A}				& 0 \\
+\cite{Artho03}~NASA				& 1	& 1	& 1	& ---					& 0 \\
+\cite{Artho04}~Coordinates'04	& 1	& 4	& 1	& \emph{3C}				& 0 \\
+\cite{Artho04}~Buffer			& 0	& 7	& 0	& \emph{2A, 1B, 2C, 2D}	& 0 \\
+\cite{Artho04}~Double-Check		& 0	& 2	& 0	& \emph{1A, 1B}			& 0 \\
+\cite{Flanagan04}~StringBuffer	& 1	& 0	& 0	& ---					& 1 \\
+\cite{Praun03}~Account			& 1	& 1	& 1	& ---					& 0 \\
+\cite{Praun03}~Jigsaw			& 1	& 2	& 1	& \emph{C}				& 0 \\
+\cite{Praun03}~Over-reporting	& 0	& 2	& 0	& \emph{1A, 1C}			& 0 \\
+\cite{Praun03}~Under-reporting	& 1	& 1	& 1	& ---					& 0 \\
+\cite{IBM-Rep}~Allocate Vector	& 1	& 2	& 1	& \emph{C}				& 0 \\
+Knight Moves					& 1	& 3	& 1	& \emph{2B}				& 0 \\
+	\midrule
+	\textbf{Total}			& \textbf{12}		& \textbf{33}		& \textbf{10}			& \textbf{5A, 6B, 10C, 2D}	& \textbf{2} \\
+	\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{figure}[htbp]
+	\centering
+    \subbottom[Novelo de lã] {%
+		\label{fig:novelo}
+		\includegraphics[height=1in]{knitting-vectorial}
+    }
+\qquad\qquad
+    \subbottom[Tempestade com neve] {%
+		\label{fig:nuvem}
+		\includegraphics[height=1in]{snowstorm-vectorial}
+    }
+  \caption{Exemplo de utilização de \emph{subbottom}}
+  \label{fig:figura-completa}
+\end{figure}
+
+
+Para incluir listagens de código no seu documento, deverá incluir o pacote \emph{listings} e depois usar o ambiente \emph{lstlisting}, como exemplificado na Listagem~\ref{lst:HelloWorld}.
+
+\lstset{language=Java, caption=Hello World, label=lst:HelloWorld}
+\begin{lstlisting}
+/** 
+ * The HelloWorldApp class implements an application that
+ * simply prints "Hello World!" to standard output.
+ */
+class HelloWorldApp {%
+    public static void main(String[] args) {%
+        System.out.println("Hello World!"); // Display the string.
+    }
+}
+\end{lstlisting}
+
+
+\end{comment}

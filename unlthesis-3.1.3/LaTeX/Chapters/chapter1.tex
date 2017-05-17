@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% chapter1.tex
+%% UNL thesis document file
+%%
+%% Chapter with introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\unlthesis}{\emph{unlthesis}}
+\newcommand{\unlthesisclass}{\texttt{unlthesis.cls}}
+
+
+\chapter{Introduction}
+\label{cha:introduction}
+
+\section{Context}
+
+Although during conversations major attention is given to the spoken content, non-verbal communication processing occurs subconsciously. Besides the verbal content of speech, it contains also non-verbal elements known as paralanguage: voice quality, rate, pitch, volume, and speaking style, prosodic features such as rhythm, intonation, and stress. But there are additional visual cues part of the non-verbal communication which in total make two thirds of communication, namely, body language (kinesics), distance (proxemics), oculesics (eye contact, patterns of fixation, etc.), and touch (haptics)\cite{Burgoon2016}.
+
+As such an important part of communication is visual the goal of this thesis is to collect RGB and depth video data related to communication, analyze and detect different communication features by applying image processing techniques as well as machine learning. For that purpose different study cases have been carefully selected:
+\begin{enumerate}
+    \item \textbf{Speech and Language Therapy}: evaluation of oromotoric exercises performed by children with lisp problems in context of the project BioVisualSpeech.
+    \item \textbf{Affective computing}: detecting and recognizing emotional state of humans.
+    \item \textbf{Facial paralysis}: detect and qualify the severity of facial paralysis.
+\end{enumerate}
+
+
+All three study cases have in common the video analysis of facial activity over a temporal window and it is expected that the same image processing and machine learning tools can be applied. In the following subchapters the motivation and impact will be described.  
+
+
+
+% ==================================================================
+
+\section{Motivation} % (fold)
+\label{sec:motivation}
+
+- multimodal time series of observations\\
+- clinical medical data consisting of \\
+
+how i want to apply it to speech. quality of muscle activation can affect verbal communication. 
+
+Use non-verbal communication to understand the engagement during exercises.\\
+
+verbal and non-verbal communication go hand in hand.
+- say that I want to apply my work for different case studies (different diseases, several persons).\\
+-search article: quantitiative assessment of bell's parsy using binary patterns. (google drive)\\
+- objective grading of facial paralysis...(google drive)
+
+----Thoughts 20.04.17:\\
+Motivation is to better understand human communication: 1) non-verbal communication: understanding feelings of patients can provide additional information of the therapy progress. Engaged patients have a better improvement than demotivated patients. Can also be applied to other areas than the therapeutic, f.ex., human-machine communication, etc. \\
+2) understanding facial activity during speech could help improve speech analysis when speech recording has poor quality or is not present; by knowing how facial muscles are engaged during speech, dysfunction can be detected and also intensity.\\
+When available use different sources of data (health records). Goal is to have a multimodal approach which includes temporal information. 
+
+Goal is to support therapy planning and to permit the therapist to have a better informed decision making. Provide the therapist with an additional tool that can map the temporal progress of the patient. \\ 
+----\\
+% ==================================================================
+
+\section{Challenges and Impact}
+
+\begin{itemize}
+    \item What are the difficulties that you wish to overcome?
+    \item If you overcome them what impact would it produce in the real-world? (patients? health professionals?)
+\end{itemize}
+
+\textbf{Challenge 1. Understanding human face muscles}
+The human face is composed by 43 muscles. Without them we would be missing an important tool for communicating not only with people from our cultural environment but also with people from different provenience as the only way to be understood would be through gestures. Our facial muscles are essential for both, verbal and non-verbal communication.\par 
+For verbal communication besides tongue, larynx, pharynx, and soft palate muscles, which are not visible from the exterior, also lip and mandibular muscles are crucial (orbicularis oris: close lips, levator labii superioris: raise upper lip, more in \cite{PhonManual}). 
+Malfunction of these muscles can be caused by neurological or motoric problems. Examples for the first cause are brain stroke and Bell's Palsy which cause facial paralysis.
+
+overview of muscles and importance
+the use of them during speech
+problems that exist in speech therapy
+necessity of solving this problem
+
+2) image processing given data recorded in different conditions (light, position, children (smaller head), head position). Complexity of human communication (many combinations of action units).\\
+
+
+----Thoughts 20.04.17:\\
+\textbf{Challenge 2. Representation of different modalities and temporal information}
+
+Find a fitting feature space. \\
+
+
+Impact 1) provide an additional tool to therapists that enables them to take advantage of data collected from other patients. By using insights of the data, actions that are beneficial to the therapy for specific patients can be detected $\rightarrow$ personalized therapy.\\
+2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
+3) save therapists time, help them predict therapy length\\
+4) patients have a tailored therapy given on continuously obtained new insights\\ 
+!use instead of therapist, health professionals (check definition)
+----\\
+% ==================================================================
+
+
+\section{Scope and Objectives}
+
+\begin{itemize}
+    \item in one sentence (3 lines) describe the goal of your thesis in a way that ``everyone'' understands
+    \item formulate a research hypothesis for the specialist audience. What is your idea?
+\end{itemize}
+
+
+Considering clinical medical data existing in the Electronic Health Records, in particular, multimodal time series of data from health sensors and medical notes collected at each patient visit, we wish to recognize health/clinical patterns to support health professionals in their decisions through (i) suggestions and (ii) similar examples.
+
+----Thoughts 20.04.17:\\
+my work will focus on image processing, specifically using video recordings. My interest lies in detecting facial activity which maybe caused during speech or just  by emotions. I want to detect if a person has difficulties in articulation which are caused by motoric dysfunctions of speech. But also want to analyze non-verbal communication triggered by emotions (disengagement of patient in the therapy, fatigue). I want to map facial muscle activity which is visible to correct/incorrect execution of speech exercises; map to different emotions and intensity. Understand two types of communication: 1) physical and visible characteristics of speech production, 2) non-verbal communication.\\
+
+To map facial activity for both communications I need to experiment different feature representations in different feature spaces. Might be that for each type of communication a separate feature space is needed. Will test if mapping improves by including additional data from different modalities, such as, speech and text annotations. \\
+
+Another goal is to develop a model to include temporal information in the feature space. For that I will take the different data representations/embeddings as input for the temporal modelling. Develop mathematical model.\\
+
+Goal is to apply this system to applications in which time has an important role, for example, in therapies (speech, psychology, etc.). Applications where temporal progression of a disease is observed through several therapy sessions.\\
+
+By being able to model the temporal progress of therapy, the progress of one patient can be compared to other patients. Patients who had a similar starting point and who had a positive outcome of the therapy, can be taken as example and provide insights of therapeutic actions that can help other similar patients to improve their progress. Thus, future actions to take can be suggested to the therapist.   
+\\
+----\\
+
+\begin{figure}
+    \centering
+    \includegraphics{faceAnatomy}
+    \caption{Muscle anatomy of the human face (anterior view).\cite{FaceMuscles}}
+    \label{fig:my_label}
+\end{figure}
+
+
+----Thoughts 20.04.17:\\
+Develop multimodal feature space which includes temporal information. Testing of different embeddings. Create statistical model which permits suggesting future therapy sessions, by comparing one patient with similar ones in an existing database.\\
+Understanding facial activity associated to non-verbal communication and to speech.\\ include diagram as scope and in that context say what the objective is.
+----\\
+research hypothesis not yet in CAT but later: writing of hypotheses write something no one did before, find niche that nobody tackled yet. 
+
+\section{Contributions}
+
+Contribution 1) A new dataset for 3D video dataset for oro-facial motor exercises with children.
+
+Contribution 2) Benchmark of embeddings for facial representation.
+
+Contribution 3) Survey of...
+
+
