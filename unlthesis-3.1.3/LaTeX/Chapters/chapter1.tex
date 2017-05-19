@@ -13,12 +13,12 @@
 
 \section{Context}
 
-Although during conversations major attention is given to the spoken content, non-verbal communication processing occurs subconsciously. Besides the verbal content of speech, it contains also non-verbal elements known as paralanguage: voice quality, rate, pitch, volume, and speaking style, prosodic features such as rhythm, intonation, and stress. But there are additional visual cues part of the non-verbal communication, namely, body language (kinesics), distance (proxemics), oculesics (eye contact, patterns of fixation, etc.), and touch. Together with paralanguage, non-verbal communication make two thirds of communication (haptics)\cite{Burgoon2016}.
+Although during conversations major attention is given to the spoken content, non-verbal communication processing occurs subconsciously. Besides the verbal content of speech, it contains also non-verbal elements known as paralanguage: voice quality, rate, pitch, volume, and speaking style, prosodic features such as rhythm, intonation, and stress. But there are additional visual cues part of the non-verbal communication, namely, body language (kinesics), distance (proxemics), oculesics (eye contact, patterns of fixation, etc.), and touch (haptics). Together with paralanguage, non-verbal communication make two thirds of communication \cite{Burgoon2016}.
 
-As such an important part of communication is visual the goal of this thesis is to collect RGB and depth video data related to communication, analyze and detect different communication features by applying image processing techniques as well as machine learning. For that purpose different study cases have been carefully selected:
+As such an important part of communication is visual, the goal of this thesis is to collect RGB and depth video data related to communication, analyze and detect different communication features by applying image processing techniques as well as machine learning. For that purpose different study cases have been carefully selected:
 \begin{enumerate}
     \item \textbf{Speech and Language Therapy}: evaluation of oromotoric exercises performed by children with lisp problems in context of the project BioVisualSpeech.
-    \item \textbf{Affective computing}: detecting and recognizing emotional state of humans.
+    \item \textbf{Affective computing}: detecting and recognizing emotional states of humans.
     \item \textbf{Facial paralysis}: detect and qualify the severity of facial paralysis \cite{Ngo2016}\cite{Sundaraj2012}.
 \end{enumerate}
 
@@ -30,11 +30,11 @@ Study case 1) is part of an international project called BioVisualSpeech in whic
     \caption{Overview of the project BioVisualSpeech.}
     \label{fig:project}
 \end{figure}
-\todo{Figure:  legend to indicate what colors mean. keep frame color for main project parts as well as title font the same.}
+\todo{Figure:  legend to indicate what colors mean. keep frame color for main project parts as well as title font the same.Include all partners of the project}
 
 Study case 2) was chosen as several datasets for expression detection are available and a taxonomy for facial movements is available in this area. As in study case 1) also facial movements have to be extracted and represented, the goal is to learn the state-of-the-art in expression detection in order to apply it to study case 1).
 
-Study case 3) is similar to study case 1) with the difference that there is no pathology concerning speech, but a facial paralysis which requires physiotherapy during several weeks. 
+Study case 3) is similar to study case 1) with the difference that there is no pathology concerning speech. However, neurological diseases can cause facial paralysis which are visible and which disturb speech production and non-verbal communication. Through physiotherapy during several weeks, the gravity of the paralysis can be reduced. 
 
 All three study cases have in common the video analysis of facial activity over a temporal window and it is expected that the same image processing and machine learning tools can be applied. In the following subchapters the motivation and impact will be described.  
 
@@ -44,6 +44,18 @@ All three study cases have in common the video analysis of facial activity over 
 
 \section{Motivation} % (fold)
 \label{sec:motivation}
+
+The human face can provide several insights such as the emotional state, symptoms of diseases (pain, elevated blood pressure, facial paralysis, autism etc.), engagement in a conversation, and so on. However, the given examples are difficult to measure quantitatively and are mainly subjective.\\
+
+In 1995, Rosalind Picard first published the term affective computing which has become a growing interdisciplinary research area in the last years. The area started by the curiosity to measure the emotional state of study participants quantitatively instead of being measured by questionnaires through self-reporting \cite{Picard2014promise}. Detection and understanding of human affects have become important not only in human-computer interaction but also in areas such as medicine, literature, psychology, marketing.
+ 
+has several insights which for many years have been ignored. In verbal communication face muscles are activated to produce speech, but also non-verbal communication needs 
+
+In traditional chinese medicine, face reading has been practiced for centuries. 
+
+Affective computing (term coined by Rosalind Picard) is a young research field which in the early years researchers working on it were laughed at.  
+
+
 - define quantitative measures for SLT
 
 - multimodal time series of observations\\
@@ -124,8 +136,6 @@ Goal is to apply this system to applications in which time has an important role
 By being able to model the temporal progress of therapy, the progress of one patient can be compared to other patients. Patients who had a similar starting point and who had a positive outcome of the therapy, can be taken as example and provide insights of therapeutic actions that can help other similar patients to improve their progress. Thus, future actions to take can be suggested to the therapist.   
 \\
 ----\\
-
-
 
 ----Thoughts 20.04.17:\\
 Develop multimodal feature space which includes temporal information. Testing of different embeddings. Create statistical model which permits suggesting future therapy sessions, by comparing one patient with similar ones in an existing database.\\
