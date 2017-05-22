@@ -62,37 +62,21 @@ For both, speech therapy and facial paralysis therapy, treatment takes several m
 
 \section{Challenges and Impact}
 
-\textbf{Challenge 1. Relate facial muscle activity to speech (portuguese and U.S. english) using RGB, depth and infrared video data.}
-
-\begin{enumerate}
-\item obtain/create data set
-\item develop image processing features that are robust to different light conditions, background, skin color, age
-\end{enumerate}
-
-
-overview of muscles and importance
-the use of them during speech
-problems that exist in speech therapy
-necessity of solving this problem
-
-Complexity of human communication (many combinations of action units).\\
-
+\textbf{Challenge 1- Relate facial muscle activity to speech (Portuguese and/or U.S. English) using RGB, depth and infrared video data.}
+In the literature, to the best knowledge of the writer, databases with all three modalities recording speech exercises were not found. Besides obtaining/creating such a data set, the biggest challenge will be to develop image processing features that are robust to different light conditions, background, skin color and age of the patient. Additonally, a machine learning algorithm needs to be found that can map facial activity to speech production (study case 1) and degree of facial paralysis (study case 3).
 
 \textbf{Impact 1}
+New insights of speech disorders can be obtained, as well as quantitative measures which in speech therapy and in the diagnoses of facial paralysis are currently are not sufficiently feasible. Besides that, the creation of a visual database would enable the therapist to review the progress of the therapy visually and not just with text annotations. \\
 
+\textbf{Challenge 2- Mathematical representation of different modalities and temporal information.} More details after writing state-of-the-art. \\
 
-\textbf{Challenge 2. Mathematical representation of different modalities and temporal information.}
+\textbf{Impact 2} A feature space that can represent the progress of different measurements over time can be used in several applications. More details after writing state-of-the-art.\\
 
-Find a fitting feature space. \\
+\textbf{Challenge 3- Clinical Decision Support System (CDSS) that suggests exercises to SLTs given the analysis of performed exercises and the comparison with the performance of other patients.} More details after writing state-of-the-art.
 
-\textbf{Impact 2}
-
-\textbf{Challenge 3. Clinical Decision Support System (CDSS) that suggests exercises to SLTs given the analysis of performed exercises and the comparison with the performance of other patients.}
-
-\textbf{Impact 3} A CDSS for SLTs would be a valuable additional tool as it would enable the therapists to create a visual database of their patients instead of only having audio of each patient. that enables them to take advantage of data collected from other patients. By using insights of the data, actions that are beneficial to the therapy for specific patients can be detected $\rightarrow$ personalized therapy.\\
+\textbf{Impact 3} A CDSS for SLTs would be a valuable additional tool as it would suggest therapists next exercises for the patient based on his/her progress and those of patients with similar problems. Through the availability of multimodal data, new insights can be gained to develop and improve personalized therapies. By analyzing the therapy progress and comparing it with those of patients with similar problems and learning rate, the therapy length could be predicted which is an interesting information for the therapist.
 2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
-3) save therapists time, help them predict therapy length\\
-4) patients have a tailored therapy given on continuously obtained new insights
+
 % ==================================================================
 
 
