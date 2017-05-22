@@ -62,75 +62,67 @@ For both, speech therapy and facial paralysis therapy, treatment takes several m
 
 \section{Challenges and Impact}
 
-\begin{itemize}
-    \item What are the difficulties that you wish to overcome?
-    \item If you overcome them what impact would it produce in the real-world? (patients? health professionals?)
-\end{itemize}
+\textbf{Challenge 1. Relate facial muscle activity to speech (portuguese and U.S. english) using RGB, depth and infrared video data.}
 
-\textbf{Challenge 1. Relate facial muscle activity to speech (portuguese and U.S. english) using RGB and depth video data}
+\begin{enumerate}
+\item obtain/create data set
+\item develop image processing features that are robust to different light conditions, background, skin color, age
+\end{enumerate}
 
-The human face is composed by 43 muscles. Without them we would be missing an important tool for communicating not only with people from our cultural environment but also with people from different provenience as the only way to be understood would be through gestures. Our facial muscles are essential for both, verbal and non-verbal communication.\par 
-For verbal communication besides tongue, larynx, pharynx, and soft palate muscles, which are not visible from the exterior, also lip and mandibular muscles are crucial (orbicularis oris: close lips, levator labii superioris: raise upper lip, more in \cite{PhonManual}). 
-Malfunction of these muscles can be caused by neurological or motoric problems. Examples for the first cause are brain stroke and Bell's Palsy which cause facial paralysis.
 
 overview of muscles and importance
 the use of them during speech
 problems that exist in speech therapy
 necessity of solving this problem
 
-2) image processing given data recorded in different conditions (light, position, children (smaller head), head position). Complexity of human communication (many combinations of action units).\\
+Complexity of human communication (many combinations of action units).\\
 
 
-----Thoughts 20.04.17:\\
-\textbf{Challenge 2. Representation of different modalities and temporal information}
+\textbf{Impact 1}
+
+
+\textbf{Challenge 2. Mathematical representation of different modalities and temporal information.}
 
 Find a fitting feature space. \\
 
+\textbf{Impact 2}
 
-Impact 1) provide an additional tool to therapists that enables them to take advantage of data collected from other patients. By using insights of the data, actions that are beneficial to the therapy for specific patients can be detected $\rightarrow$ personalized therapy.\\
+\textbf{Challenge 3. Clinical Decision Support System (CDSS) that suggests exercises to SLTs given the analysis of performed exercises and the comparison with the performance of other patients.}
+
+\textbf{Impact 3} A CDSS for SLTs would be a valuable additional tool as it would enable the therapists to create a visual database of their patients instead of only having audio of each patient. that enables them to take advantage of data collected from other patients. By using insights of the data, actions that are beneficial to the therapy for specific patients can be detected $\rightarrow$ personalized therapy.\\
 2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
 3) save therapists time, help them predict therapy length\\
-4) patients have a tailored therapy given on continuously obtained new insights\\ 
-!use instead of therapist, health professionals (check definition)
-----\\
+4) patients have a tailored therapy given on continuously obtained new insights
 % ==================================================================
 
 
 \section{Scope and Objectives}
 
-\begin{itemize}
-    \item in one sentence (3 lines) describe the goal of your thesis in a way that ``everyone'' understands
-    \item formulate a research hypothesis for the specialist audience. What is your idea?
-\end{itemize}
+The goal of this thesis is to analyze facial activity, produced by speech therapy exercises and facial paralysis exercises, recorded by RGB, depth, and infrared cameras during several therapy sessions in order to develop a clinical decision support system that uses multimodal data to support health professionals in their decisions through exercise suggestions.
 
+As seen in Fig.~\ref{fig:project}, the scope of this work is limited on exploring feature representations for video data and introducing text information into the machine learning framework, which is also part of this thesis, in order to represent progress done by the patient on different time instants (temporal modeling). In the following, the milestones to reach the goal of this thesis will be presented and explained. \\
 
+\textbf{Objective 1- Find image features for RGB, depth, and infrared data that permit the mapping of visible facial muscle activity to correct/incorrect execution of speech exercises OR paralysis severity.} It is expected that by combining different modalities (RGB, depth, infrared) the feature representation of facial activity is improved. The goal is that the feature representation permits the binary classification of correct/incorrect execution of speech exercises in the case of applying to speech therapy. In the case of facial paralysis the goal is to have a feature representation that permits a multiclass classification for the degree of severity of the paralysis.\\
+
+\textbf{Objective 2 - Measure engagement during exercises through detecting relevant facial expressions.} Speech therapy requires monotonous repetition of exercises which can affect the engagement of the patient. By detecting in real-time the disengagement of the patient, different exercises can be suggested to maintain a positive learning curve. \\
+
+\textbf{Objective 3 - Find a feature space that includes features from different modalities, therapist annotations and time.}
+Additionally to visual features, therapist annotations will be used to represent the progress of the therapy over time. As the therapy is performed through several sessions the time component is essential to measure the progress of a patient. 
+
+\textbf{Objective 4 - Develop statistical model that suggests future exercises by comparing one patient with similar ones in an existing database.} By being able to model the temporal progress of the therapy, the progress of one patient can be compared to the progress of others. Patients with similar starting point and positive conclusion of the therapy, can be taken as example and can provide insights of therapeutic actions that can help other similar patients to improve their progress. Thus, future actions to take can be suggested to the therapist. This model could also be used for other applications where temporal progression of a disease is observed through several therapy sessions.  
+
+\begin{comment}
 Considering clinical medical data existing in the Electronic Health Records, in particular, multimodal time series of data from health sensors and medical notes collected at each patient visit, we wish to recognize health/clinical patterns to support health professionals in their decisions through (i) suggestions and (ii) similar examples.
-
-----Thoughts 20.04.17:\\
-my work will focus on image processing, specifically using video recordings. My interest lies in detecting facial activity which maybe caused during speech or just  by emotions. I want to detect if a person has difficulties in articulation which are caused by motoric dysfunctions of speech. But also want to analyze non-verbal communication triggered by emotions (disengagement of patient in the therapy, fatigue). I want to map facial muscle activity which is visible to correct/incorrect execution of speech exercises; map to different emotions and intensity. Understand two types of communication: 1) physical and visible characteristics of speech production, 2) non-verbal communication.\\
-
-To map facial activity for both communications I need to experiment different feature representations in different feature spaces. Might be that for each type of communication a separate feature space is needed. Will test if mapping improves by including additional data from different modalities, such as, speech and text annotations. \\
-
-Another goal is to develop a model to include temporal information in the feature space. For that I will take the different data representations/embeddings as input for the temporal modelling. Develop mathematical model.\\
-
-Goal is to apply this system to applications in which time has an important role, for example, in therapies (speech, psychology, etc.). Applications where temporal progression of a disease is observed through several therapy sessions.\\
-
-By being able to model the temporal progress of therapy, the progress of one patient can be compared to other patients. Patients who had a similar starting point and who had a positive outcome of the therapy, can be taken as example and provide insights of therapeutic actions that can help other similar patients to improve their progress. Thus, future actions to take can be suggested to the therapist.   
-\\
-----\\
-
-----Thoughts 20.04.17:\\
-Develop multimodal feature space which includes temporal information. Testing of different embeddings. Create statistical model which permits suggesting future therapy sessions, by comparing one patient with similar ones in an existing database.\\
-Understanding facial activity associated to non-verbal communication and to speech.\\ include diagram as scope and in that context say what the objective is.
-----\\
-research hypothesis not yet in CAT but later: writing of hypotheses write something no one did before, find niche that nobody tackled yet. 
+\end{comment}
 
 \section{Contributions}
 
-Contribution 1) A new dataset for 3D video dataset for oro-facial motor exercises with children.
+Since September 2016 the following contributions have been made.
+\begin{enumerate}
+\item Collection of a new 3D video dataset recorded with a Microsoft Kinect 2,  containing oro-facial motor exercises performed by children of the age ... with no prior speech disorder diagnosis 
+\item Benchmark of embeddings for facial representation
+\item Survey of state-of-the-art in expression detection and image processing for facial paralysis detection
+\end{enumerate} 
 
-Contribution 2) Benchmark of embeddings for facial representation.
-
-Contribution 3) Survey of...
 
 
