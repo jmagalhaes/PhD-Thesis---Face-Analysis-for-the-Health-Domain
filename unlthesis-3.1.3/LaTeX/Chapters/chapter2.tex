@@ -17,13 +17,17 @@ In this chapter the difference between verbal and non-verbal communication will 
 
 
 % ==================================================================
-\section{Speech Production Anatomy} % (fold)
+\section{Facial Muscles} % (fold)
 \label{sec:anatomy}
 
+
 The human face is composed by 43 muscles. Without them we would be missing an important tool for communicating not only with people from our cultural environment but also with people from different provenience as the only way to be understood would be through gestures. Our facial muscles are essential for both, verbal and non-verbal communication.\par 
+
+\subsection{Speech Production Anatomy}
 For verbal communication besides tongue, larynx, pharynx, and soft palate muscles, which are not visible from the exterior, also lip and mandibular muscles are crucial (orbicularis oris: close lips, levator labii superioris: raise upper lip, more in \cite{PhonManual}). 
 Malfunction of these muscles can be caused by neurological or motoric problems, causing f.ex. speech disorders or facial paralysis. 
 
+\subsection{Muscles of Facial Expression}
 
 \begin{figure}
     \centering
@@ -33,17 +37,50 @@ Malfunction of these muscles can be caused by neurological or motoric problems, 
 \end{figure}
 
 % ==================================================================
-\section{Computational Representations of Human Faces}
+\section{Automatic Facial Expression Recognition}
 
-\subsection{Facial action coding system (FACS)}
+\begin{figure}
+{\footnotesize
+\begin{forest}
+    for tree={
+      edge path={
+        \noexpand\path [draw, thick, \forestoption{edge}] (!u.parent anchor) -- +(5pt,0) |- (.child anchor)\forestoption{edge label};
+      },
+      parent anchor=east,
+      child anchor=west,
+      grow'=east,
+      text centered,
+      minimum width=1in,
+      text width=2.4cm
+      }
+ [Automatic\\  Facial\\ Expression Recognition [Parametrization [Descriptive] [Judgement]] [Recognition [Face \\ localization [Detection] [Segmentation]] [Face \\ registration] [Feature \\ extraction [Predesigned [Appearance][Geometry][Appearance + Geometry]][Learned]] [Expression\\ Classification /Regression [Categorical] [Continuous]] [Multimodal \\fusion [Direct fusion][Early fusion][Late fusion] [Sequential]]]]
+  \end{forest}
+}
+\caption{Taxonomy for AFER adapted from \cite{Corneanu2016survey}.}
+\label{fig:AFER}
+\end{figure}
+
+Automatic Facial Expression Recognition (AFER) is an interdisciplinary domain in which researchers from behavioural science, neurology, psychology, and computer science investigate the recognition of facial expressions which can give us insights about the emotional state of a person.
+
+\subsection{Parametrization of FEs}
 
 
 
 
-\subsection{Geometric landmarks}
+\subsection{Recognition of FEs}
+
+\subsubsection{Face Localization}
+
+\subsubsection{Face Registration}
+
+\subsubsection{Feature Extraction}
+
+\subsubsection{FE Classification and Regression}
+
+\subsubsection{Multimodal Fusion Techniques}
 
 \subsection{3D representations}
-
+\cite{Sandbach2012survey}
 \subsection{Thermal}
 
 
