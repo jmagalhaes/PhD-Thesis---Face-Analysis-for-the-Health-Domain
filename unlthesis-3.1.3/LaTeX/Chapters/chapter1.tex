@@ -62,6 +62,13 @@ For both, speech therapy and facial paralysis therapy, treatment takes several m
 
 \section{Challenges and Impact}
 
+A Clinical Decision Support for SLTs would be a valuable additional tool as it would suggest therapists next exercises for the patient based on his/her progress and those of patients with similar problems. Through the availability of multimodal data, new insights can be gained to develop and improve personalized therapies. By analyzing the therapy progress and comparing it with those of patients with similar problems and learning rate, the therapy length could be predicted which is an interesting information for the therapist.
+2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
+
+\textbf{Long-term vision- How to provide SLTs with exercises suggestions based on the analysis of the patient history and previous knowledge?} More details after writing state-of-the-art.
+
+To fullfil this vision I shall address two research challenges:
+
 \textbf{Challenge 1- Relate facial muscle activity to speech (Portuguese and/or U.S. English) using RGB, depth and infrared video data.}
 In the literature, to the best knowledge of the writer, databases with all three modalities recording speech exercises were not found. Besides obtaining/creating such a data set, the biggest challenge will be to develop image processing features that are robust to different light conditions, background, skin color and age of the patient. Additonally, a machine learning algorithm needs to be found that can map facial activity to speech production (study case 1) and degree of facial paralysis (study case 3).
 
@@ -72,28 +79,26 @@ New insights of speech disorders can be obtained, as well as quantitative measur
 
 \textbf{Impact 2} A feature space that can represent the progress of different measurements over time can be used in several applications. More details after writing state-of-the-art.\\
 
-\textbf{Challenge 3- Clinical Decision Support System (CDSS) that suggests exercises to SLTs given the analysis of performed exercises and the comparison with the performance of other patients.} More details after writing state-of-the-art.
-
-\textbf{Impact 3} A CDSS for SLTs would be a valuable additional tool as it would suggest therapists next exercises for the patient based on his/her progress and those of patients with similar problems. Through the availability of multimodal data, new insights can be gained to develop and improve personalized therapies. By analyzing the therapy progress and comparing it with those of patients with similar problems and learning rate, the therapy length could be predicted which is an interesting information for the therapist.
-2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
-
 % ==================================================================
 
 
-\section{Scope and Objectives}
+\section{Research hypotheses}
 
 The goal of this thesis is to analyze facial activity, produced by speech therapy exercises and facial paralysis exercises, recorded by RGB, depth, and infrared cameras during several therapy sessions in order to develop a clinical decision support system that uses multimodal data to support health professionals in their decisions through exercise suggestions.
 
 As seen in Fig.~\ref{fig:project}, the scope of this work is limited on exploring feature representations for video data and introducing text information into the machine learning framework, which is also part of this thesis, in order to represent progress done by the patient on different time instants (temporal modeling). In the following, the milestones to reach the goal of this thesis will be presented and explained. \\
 
-\textbf{Objective 1- Find image features for RGB, depth, and infrared data that permit the mapping of visible facial muscle activity to correct/incorrect execution of speech exercises OR paralysis severity.} It is expected that by combining different modalities (RGB, depth, infrared) the feature representation of facial activity is improved. The goal is that the feature representation permits the binary classification of correct/incorrect execution of speech exercises in the case of applying to speech therapy. In the case of facial paralysis the goal is to have a feature representation that permits a multiclass classification for the degree of severity of the paralysis.\\
+Link this to a Gantt chart.
 
-\textbf{Objective 2 - Measure engagement during exercises through detecting relevant facial expressions.} Speech therapy requires monotonous repetition of exercises which can affect the engagement of the patient. By detecting in real-time the disengagement of the patient, different exercises can be suggested to maintain a positive learning curve. \\
+\textbf{Task 1- Research image features for RGB, depth, and infrared data that permit the mapping of visible facial muscle activity to correct/incorrect execution of speech exercises OR paralysis severity.} It is expected that by combining different modalities (RGB, depth, infrared) the feature representation of facial activity is improved. The goal is that the feature representation permits the binary classification of correct/incorrect execution of speech exercises in the case of applying to speech therapy. In the case of facial paralysis the goal is to have a feature representation that permits a multiclass classification for the degree of severity of the paralysis.\\
 
-\textbf{Objective 3 - Find a feature space that includes features from different modalities, therapist annotations and time.}
+\textbf{Task 2 - Understand the relation ... engagement during exercises through detecting relevant facial expressions.} Speech therapy requires monotonous repetition of exercises which can affect the engagement of the patient. By detecting in real-time the disengagement of the patient, different exercises can be suggested to maintain a positive learning curve. \\
+
+\textbf{Task 3 - Research feature spaces that relates in meaningfully manner information from different modalities, therapist annotations and time.}
+Suuport the SLTs reasoning and exploration of health data. 
 Additionally to visual features, therapist annotations will be used to represent the progress of the therapy over time. As the therapy is performed through several sessions the time component is essential to measure the progress of a patient. 
 
-\textbf{Objective 4 - Develop statistical model that suggests future exercises by comparing one patient with similar ones in an existing database.} By being able to model the temporal progress of the therapy, the progress of one patient can be compared to the progress of others. Patients with similar starting point and positive conclusion of the therapy, can be taken as example and can provide insights of therapeutic actions that can help other similar patients to improve their progress. Thus, future actions to take can be suggested to the therapist. This model could also be used for other applications where temporal progression of a disease is observed through several therapy sessions.  
+\textbf{Task 4 - Develop statistical model that suggests future exercises by comparing one patient with similar ones in an existing database.} By being able to model the temporal progress of the therapy, the progress of one patient can be compared to the progress of others. Patients with similar starting point and positive conclusion of the therapy, can be taken as example and can provide insights of therapeutic actions that can help other similar patients to improve their progress. Thus, future actions to take can be suggested to the therapist. This model could also be used for other applications where temporal progression of a disease is observed through several therapy sessions.  
 
 \begin{comment}
 Considering clinical medical data existing in the Electronic Health Records, in particular, multimodal time series of data from health sensors and medical notes collected at each patient visit, we wish to recognize health/clinical patterns to support health professionals in their decisions through (i) suggestions and (ii) similar examples.
