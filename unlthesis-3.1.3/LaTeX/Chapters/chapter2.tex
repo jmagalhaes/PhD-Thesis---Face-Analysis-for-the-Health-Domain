@@ -7,13 +7,98 @@
 \chapter{Fundamentals}
 \label{cha:fundamentals}
 
-In this chapter the difference between verbal and non-verbal communication will be clarified. To understand what factors influence the quality of speech, in \ref{sec:anatomy} the anatomy of speech production will be explained.  
+As described in the introductory chapter, face expression analysis is an interdisciplinary research area. To permit the reader a better understanding of the state-of-the-art, this chapter covers fundamental knowledge of the different research areas involved in this project. 
 
+This chapter starts by explaining the importance of communication nowadays and the communication problems that exist in our societies, why communication skills are gaining more and more importance, not only on a personal level but also on an economical level and how speech and language therapists (SLTs) work to prevent, diagnose and treat speech and language disorders.
+
+In chapter~\ref{sec:anatomy} an overview of the anatomy essential to communicate verbally as well as non-verbally is presented. Based on the facial muscle activity during speech and facial expressions, in chapter~\ref{sec:compRepresentation} non-invasive methods are shown to detect facial activity using images from different modalities, such as RGB, thermal, and depth cameras.
+
+In the end of this chapter, applications of face analysis in medicine will be presented.\todo{last chapter leave here or in chap 3?} 
 
 
 % ==================================================================
-\section{Verbal vs. Non-verbal Communication} % (fold)
+\section{Interpersonal Communication} % (fold)
 \label{sec:communication}
+
+Communication is a pivotal part of our societies. Through communication we exchange ideas, opinions, feelings, and much more using different channels of communication such as visual, auditory, haptic, olfactory, and others. We communicate with our loved ones and friends, as well as in our professions. Having a deficit in one of the communication skills (hearing, voice, speech, and language\todo{include definition in glossary}) can not only cause decreased self-esteem but also tremendous disadvantages in professional lifes. 
+
+Two main types of communication exist: verbal and non-verbal. The first one refers to what is also known as linguistics, which considers the sound and meaning of human language. Non-verbal communication refers to information transmitted through body language (kinesics), distance (proxemics), voice (paralanguage), and touch (haptics) \cite{Burgoon2016}. Also eye contact and eye movements while talking and listening are part of non-verbal communication, as well as frequency of glances, patterns of fixation, pupil dilation, and blink rate which altogether make part of occulesics. Consciously and unconsciously, the human brain uses information from different communication channels to validate events in order to make decisions (see Fig.~\ref{fig:humanCommunication}).
+
+\begin{figure}
+\centering
+ \includegraphics[width=10cm]{humanCommunication}
+ \caption{In human communication the brain relies on several sources of sensory inputs,  such as visual, haptic, auditory, and  olfactory to validate events. By processing different sources of information consciously and unconsciously incomplete information can be compensated. Image from \cite{Poria2017}.}
+ \label{fig:humanCommunication}
+ \end{figure} 
+
+Nevertheless, pathologies exist which hinder the proper encoding or decoding of communicated information. Some disorders which cause difficulties in communicating are autism, brain tumours, dementia (ex. Alzheimer's disease), Parkinson's disease, Huntington's disease, Multiple Sclerosis, and Epilepsy. All voice, language, speech, and swallowing problems make part of communication disorders and can be classified into speech and language disorders (more information in chapter~\ref{sec:SLP}). 
+
+In \cite{Ruben2000}, Robert Ruben predicts that communication disorders will be a major public health challenge for the 21st century. According to Ruben, the economic basis of American society has undergone fundamental changes. In the beginning of the last century, at least 80\% of the American labor force were employed in tasks that depended on manual habilities. However, at the end of the same century already 62\% of the American labor force work in jobs using skills based on their communication abilities and of the remaining 37\% which are defined as farming and blue collar, many are also dependent on their communication abilities, as farmers have becoe farm managers. In this scenario, communication disorders present a great disadvantage. It has been estimated that communication disorders have a prevalence of 5\% to 10\% and that people suffering from them are economically more disadvantaged than those with hearing loss or other disabilities. Kruse shows in \cite{Kruse1997} that people unable to hear are less unemployed (47.6\%) than people with difficulty in speaking understandably (67.6\%). Ruben concludes in \cite{Ruben2000} that communication disorders may cost the U.S. \$154-\$186 billion per year, which is equal to 2.5\%-3\% of the Gross National Product.
+
+As the ability to communicate effectively became an integral part of the fitness of a person, it is essential to increase allocation of resources to optimize the communication abilities of society as well as to invest in prevention and early detection of communication disorders. Prevention, diagnosis, and therapy of speech and language disorders are part of a speech and language therapist's (SLT's) job. In the following, speech and language pathologies will be presented as well as tools that SLTs use to perform their job.
+
+% ==================================================================
+\section{Speech and Language Disorders}
+\label{sec:SLP}
+
+\theoremstyle{definition}
+\begin{definition}{Speech-language pathology\\}
+Speech-language pathology services are those services necessary for the \textbf{diagnosis} and \textbf{treatment} of swallowing (dysphagia), speech-language, and cognitive-communication disorders that result in communication disabilities. Speech-language pathologists treat disorders of speech sound production (e.g., articulation, apraxia, dysarthria), resonance (e.g., hypernasality, hyponasality), voice (e.g., phonation quality, pitch, respiration), fluency (e.g., stuttering), language (e.g., comprehension, expression, pragmatics, semantics, syntax), cognition (e.g., attention, memory, problem solving, executive functioning), and feeding and swallowing (e.g., oral, pharyngeal, and esophageal stages). (Page 4 in \cite{SLPathologies})
+\label{def:SLP}
+\end{definition}
+
+SLPs diagnose and treat patients with voice, speech, language, and swallowing disorders (see above Def.\ref{def:SLP}). Communication disorders can be found in all age groups. It is estimated that 40 million Americans have communication disorders. In the following some detailed facts will listed taken from 
+Page 10 \cite{SLPathologies}:
+
+\begin{itemize}
+\item 6-8 million people in the United States (US) have some form of language impairment.
+\item Roughly 1 million people in the US suffer from aphasia. 
+\item More than 3 million Americans stutter. 
+\item About 5\% of children have noticeable speech disorders by the first grade 
+\item Specific language impairment is one of the most common childhood disorders, affecting 7\%-8\% of children in kindergarten. 
+\item Approximately 7.5 million Americans have trouble using their voices.
+\item 1 million people in the US currently suffer from Parkinson’s disease, with an estimated 50,000-60,000 new cases diagnosed annually. 
+\item It is estimated that 89\% of individuals with Parkinson’s worldwide have a speech or voice disorder, but only 3\% to 4\% receive speech or voice treatment. 
+\item An estimated 300,000-600,000 people per year are affected by dysphagia resulting from neurologic disorders. 
+\item Each year an estimated 2.4 million individuals in the U.S. sustain a traumatic brain injury (TBI) and another 795,000 individuals sustain an acquired brain injury (ABI) from nontraumatic causes.
+\end{itemize}
+
+The listed communication disorders can have different etiologies. Communication disorders can be caused by neonatal problems (e.g., prematurity, low birth weight, substance exposure) or developmental disabilities (e.g., specific language impairment, autism spectrum disorder, dyslexia, attention deficit/hyperactive disorder). Also oral anomalies (e.g., cleft lip/palate, dental malocclusion, macroglossia, oral-motor dysfunction) and neurological diseases/dysfunctions (e.g., traumatic brain injury, cerebral palsy, cerebral vascular accident, dementia, Parkinson's disease, amyotrophic lateral sclerosis) can cause several communication problems.
+
+Especially progressive neurological diseases and disorders of the brain can have a huge impact on communication abilities. Alzheimer's disease is one of the most common forms of dementia and its progression is approximately 10 years. This disease mainly affects people after the age of 60 and is usually diagnosed when two or more functions are affected, e.g. cognition and language which are the first to impaired. Communication problems that are associated with Alzheimer's disease are apraxia of speech, dysarthria (most commonly hypokinetic dysarthria) \todo{include definition in glossary} and word finding difficulties. The expressive language skill maybe intact, but their verbalisations become confused or out of context and with the progression of the disease their understanding becomes poorer and some patients even become speechless or unresponsive. Some patients with Alzheimer's disease also become emotional or particularly depressed. \cite{communicationDifficulties} 
+ 
+Parkinson's Disease is also a progressive neurological disease which has increased in incidence, as did longevity. First symptoms include disordered speech and swallowing difficulties and usually appear after the age of 50. A common speech problem is dysarthria which may be caused by a combination of problems with respiration, phonation, resonance, prosody, and articulation. All of these factoris result in a decerase in intelligibility. Dysphonia may occur which leads to a weak voice. For patients it can be difficult to finish sentences and due to changes in manner and place of articulation the articulation of consonants can become disordered. Some people with Parkinson's experience pailalia where words follow each other at a rapid speed and some phrases are repeated continuously. Speech may become monotonous and some patients experience difficulties with resonance, caused by a rigid palate and failure to close the nasopharynx leading to hyper nasality.\cite{communicationDifficulties}
+
+Another neurological disease that can appear between the ages of 20 to 40 years is Multiple Sclerosis (MS). Severe symtpoms can follow this disease but the majority of patients with MS continue to live active lifes. However, around 50\% of MS patients have speech difficulties, and dysarthria is common. 
+Problems with prosody, phonation and articulation can occur as well as harsh or breathy voice and difficulties with control of pitch, rate, and volume. It is estimated that around 50\% of people with MS have difficulties with
+articulation and 25\% have some form of hypernasality. Some strategies to improve communication following a diagnosis of MS include breath exercises to improve volume and sentence length as well as speech muscle exercises to improve dyarthric speech. \cite{communicationDifficulties}
+
+\subsection{Tools used in Speech Therapy}
+
+https://www.speechbuddy.com/parents/how-it-works/products/speech-buddies-set
+
+visual feedback tool is important as audio feedback is not useful as they have been doing the sounds and for them it is correct. it is not a guesswork anymore, not the patietns opinion or the therapists opinion. Children love technology. it is like a game, they can compete against therapist and are motivated to improve. also valuable for therapists as they can better explain to students how to produce sounds. apraxia, residual articulation problems where traditional therapy didn't help. 
+http://completespeech.com/smartpalate/
+
+sound measuring apparatus/ decibel meter: electroglottograph (EGG), laryngograph
+
+stroboscopes: diagnostic stroboscopes, video stroboscopes
+
+tablet computer: tablets are engaging, portable, affordable, multifunctional, apps designed for SLT
+
+AAC, or augmentative and alternative communication, is a series of interventions used to help children with severe communication disorders communicate. Many apps are designed based on this method of therapy.
+
+Analytical Software:
+Language Analysis Software,
+Signal Analysis Software,
+Speech Analysis Software
+
+Medical Software:
+Aphasia Treatment – Aphasia Tutor by Bungalow Software,
+Multi-Speech - KayPENTAX,
+Speech Training System – Video Voice,
+Text to Speech – Universal Reader by Premiere Assistive Technology
+
 
 
 % ==================================================================
@@ -38,7 +123,7 @@ Malfunction of these muscles can be caused by neurological or motoric problems, 
 
 % ==================================================================
 \section{Automatic Facial Expression Recognition}
-
+\label{sec:compRepresentation}
 \begin{figure}
 {\footnotesize
 \begin{forest}
@@ -83,35 +168,20 @@ Automatic Facial Expression Recognition (AFER) is an interdisciplinary domain in
 \cite{Sandbach2012survey}
 \subsection{Thermal}
 
-
 % ==================================================================
-\section{Speech Language Pathology}
-\label{sec:SLP}
-\cite{SLPathologies}: prevalence in the US on page 10
+\section{Face Analysis in Medicine}
 
-Diagnosis and treatment of:\\
-- swallowing (dysphagia) \\
-- speech-language disorders\\
-- cognitive-communication disorders\\
+Parkinson's Disease \cite{Almutiry2016}.
+
+Autism causes difficulty in reading faces and show deficits in non-verbal as well as in verbal communication.
+
+facial paralysis show visible difficulty in speaking and expressing emotions.
+
+pain can be measured through face analysis.
+
+is there work that relates face analysis to speech disorders? 
 
 
-Speech-Language Pathologists treat disorders of:\\
-- speech sound production (e.g., articulation, apraxia, dysarthria)\\
-- resonance (e.g., hypernasality, hyponasality)\\
-- voice (e.g., phonation quality, pitch, respiration)\\
-- fluency (e.g., stuttering)\\
-- language (e.g., comprehension, expression, pragmatics, semantics, syntax)\\
-- cognition(e.g., attention, memory, problem solving, executive functioning)\\
-- feeding and swallowing (e.g., oral, pharyngeal, and esophageal stages) \\
-
-Some etiologies:\\
-- neonatal problems (e.g., prematurity, low birth weight, substance exposure)\\
-- developmental disabilities (e.g., specific language impairment, autism spectrum
-disorder, dyslexia, attention deficit/hyperactive disorder)\\
-- oral anomalies (e.g., cleft lip/palate, dental malocclusion, macroglossia, oral-motor
-dysfunction)\\
-- neurological disease/dysfunction (e.g., traumatic brain injury, cerebral palsy, cerebral
-vascular accident, dementia, Parkinson's disease, amyotrophic lateral sclerosis)\\
 
 
 
