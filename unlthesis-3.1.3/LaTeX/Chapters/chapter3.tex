@@ -7,24 +7,50 @@
 \chapter{State Of the Art}
 \label{cha:stateofart}
 
-\section{Audio-Visual Speech Recognition}
+
+\section{Multimodal Machine Learning}
+
+Information is being exchanged through different channels. These different channels can be called modalities. The same way humans can process information coming from different sources in order to take conclusions and take action, the ultimate goal of artificial intelligence is to understand the world around us by collecting, interpreting and reasoning multimodal data. This field can be called \textbf{Multimodal Machine Learning} which aims to build models that can process and relate information from multiple modalities and which is gaining more and more importance and has extraordinary potential \cite{Baltruvsaitis2017multimodal}.
+
+Although Multimodal Machine Learning brings many challenges given the heterogeneity of data, the hope is to gain a deeper understanding of natural phenomena as data from multimodal sources are used to capture correspondences between the modalities.
+
+One of the first examples of multimodal research is audio-visual speech recognition (AVSR) in 1989. The motivation came from the discovered McGurk effect in which it was found that human perception of sound is not independent from the visual perception. During the experiment subjects heard the syllable /ba-ba/ while they the lips of a person saying /ga-ga/, however, they perceived the sound /da-da/. Researcher from the speech community started to include visual information in their investigations. Although research in AVSR is not common currently, the deep learning community showed renewd interest \cite{Ngiam2011}. What was shown in the experiental results in AVSR is that the captured interactions between speech and visual information were not complementary but rather supplementary. For ex. experimental results showed more advantage of using visual information when the speech signal was noisy but not when the scenario was noiseless.
+In \cite{Dmello2015review} several multimodal affect recognition results were compared and their meta-analysis revealed that a majority of recent work on multimodal affect recognition showed an improvement when using more than one modality. However, the improvement on naturally-occurring emotions is reduced. 
+
+There are main challenges (taken from \cite{Baltruvsaitis2017multimodal}, \todo{rephrase}):
+\begin{enumerate}
+\item \textbf{Representation:} A first fundamental challenge is learning how to represent and summarize multimodal data in a way that exploits the complementarity and redundancy of multiple modalities. The heterogeneity of multimodal data makes it challenging to construct such representations. For example, language is often symbolic while audio and visual modalities will be represented as signals.
+\item \textbf{Translation:} A second challenge addresses how to translate (map) data from one modality to another. Not only is the data heterogeneous, but the relationship between modalities is often open-ended or subjective. For example, there exist a number of correct ways to describe an image and and one perfect translation may not exist.
+\item \textbf{Alignment:} A third challenge is to identify the direct relations between (sub)elements from two or more different modalities. For example, we may want to align the steps in a recipe to a video showing the dish being made. To tackle this challenge we need to measure similarity between different modalities and deal with possible longrange dependencies and ambiguities.
+\item \textbf{Fusion:} A fourth challenge is to join information from two or more modalities to perform a prediction. For example, for audio-visual speech recognition, the visual description of the lip motion is fused with the speech signal to predict spoken words. The information coming
+from different modalities may have varying predictive power and noise topology, with possibly missing data in at least one of the modalities.
+\item \textbf{Co-learning:} A fifth challenge is to transfer knowledge between modalities, their representation, and their predictive models. This is exemplified by algorithms of cotraining,
+conceptual grounding, and zero shot learning.
+Co-learning explores how knowledge learning from one modality can help a computational model trained on a different modality. This challenge is particularly relevant when one of the modalities has limited resources (e.g., annotated data).
+\end{enumerate}
+
+\subsection{Multimodal Representations}
+
+Following the work of Bengio et al. [17]
+we use the term feature and representation interchangeably, with each referring to a vector or tensor representation of an entity, be it an image, audio sample, individual word, or a sentence. A multimodal representation is a representation of data using information from multiple such entities. \cite{Baltruvsaitis2017multimodal}
 
 
-\section{Lip-Reading}
+There are different challenges when it comes to represent multimodal data: how to combine data from heterogeneous soures; how to deal with different levels of noise; and how to deal with missing data. \cite{Baltruvsaitis2017multimodal}
 
-\section{Affective Computing}
+\textbf{Backbone of any multimodal model is the representation of the data!} Good representations are important for the performance of machine learning models.
 
-
-
-\section{Available APIs for face analysis}
+In \cite{Bengio2013representation} the characteristics of good representations are listed: smoothness, temporal and spatial coherence, sparsity, and natural clustering amongst others. In \cite{Srivastava2012} additional desirable properties for multimodal represenations are listed such as similarity in the representation space should reflect similarity of the corresponding concepts, the representation should be easy to obtain even in the absence of some modalities, and it should be possible to fill-in missing modalities given observed ones.
 
 
-\section{Methods and algorithms that address similar problems} % (fold)
+\subsection{Application}
+\subsubsection{Audio-Visual Speech Recognition}
 
-http://www.fdna.com\\
 
+\subsubsection{Lip-Reading}
 
-Behavioral signal processing: \\
+\subsubsection{Affective Computing}
+
+\cite{Narayanan2013} Behavioral signal processing: \\
 from \url{http://people.csail.mit.edu/jrg/meetings/2016-Feb8-ShriN.pdf}\\
 \begin{itemize}
     \item computing behavioral traits \& states for decision making and action
@@ -54,7 +80,58 @@ $\rightarrow$ People’s judgment of others behavior
 \end{itemize}
 
 
+\section{Available Datasets}
 
+\textbf{SEMAINE Database: }
+conversation with a virtual agent; study interpersonal dynamics between
+speakers and listeners. This dataset was used for the fisr audio-visual emotion challenge (AVEC) in 2011. \url{https://semaine-db.eu}\\
+
+\textbf{SEWA Database: }
+The SEWA database includes annotations of the recordings in terms of facial landmarks, facial action unit (FAU) intensities, various vocalisations, verbal cues, mirroring, and rapport, continuously valued valence, arousal, liking, and prototypic examples (templates) of (dis)liking and sentiment. The data has been annotated in an iterative fashion, starting with a sufficient amount of examples to be annotated in a semi-automated manner and used to train various feature extraction algorithms developed in SEWA, and ending with a large DB of annotated facial behaviour recorded in the wild. Used for AVEC 2017. \url{https://db.sewaproject.eu}\\
+
+\textbf{HUMAINE Database:} 
+This is a the HUMAINE database which became available at the end of 2007. It consists of an exemplar set of 50 clips from naturalistic and induced data showing a range of modalities and emotions, and a subset of 16 clips selected to cover a balanced sample of emotional behaviour in a range of contexts. This subset is labelled. \url{http://humaine-db.sspnet.eu/}\\
+
+\textbf{EATMINT database: }
+The EATMINT database contains multi-modal and multi-user recordings of affect and social behaviors in a collaborative setting. The following signals were recorded for 30 dyads (i.e. 60 participants) :
+\begin{itemize}
+\item Physiological signals: electrocardiogram, electrodermal activity (GSR), blood volume pulse, respiration and skin temperature;
+\item Behaviors: eye-movements (eye-tracking), facial expressions, software actions logs;
+\item Discourse: speech signals and transcripts.
+\end{itemize}
+Each interaction is annotated in term of affect, collaboration and social aspects (e.g. conflict, grounding, etc.) \url{https://eatmint.unige.ch/home.php}\\
+
+\textbf{RECOLA multimodal database:} The database consists of 9.5 hours of audio, visual, and physiological (electrocardiogram, and electrodermal activity) recordings of online dyadic interactions between 46 French speaking participants, who were solving a task in collaboration. Affective and social behaviors expressed by the participants were reported by themselves, at different steps of the study, and by six French-speaking assistants using the ANNEMO web-based annotation tool (time and value 'continuous'), for the first five minutes of interaction; 3.8 / 2.9 hours of annotated audiovisual / multimodal data, respectively. \url{https://diuf.unifr.ch/diva/recola/}\\
+
+\textbf{MMDB:} We introduce the Multimodal Dyadic Behavior (MMDB) dataset, a unique collection of multimodal (video, audio, and physiological) recordings of the social and communicative behavior of toddlers. The MMDB contains 160 sessions of 3-5 minute semi-structured play interaction between a trained adult examiner and a child between the age of 15 and 30 months. Our play protocol is designed to elicit social attention, back-and-forth interaction, and non-verbal communication from the child. These behaviors reflect key socio-communicative milestones which are implicated in autism spectrum disorders. The MMDB dataset supports a novel problem domain for activity recognition, which consists of the decoding of dyadic social interactions between adults and children in a developmental context. \url{http://www.cbi.gatech.edu/mmdb/}
+
+
+\section{Available APIs for face analysis}
+
+\textbf{Healthcare:} 
+Quote: "We use facial analysis, deep learning and artificial intelligence to transform big data into actionable genomic intelligence to improve diagnostics and therapeutics. With the world’s largest network of clinicians, labs and researchers creating one of the fastest growing and most comprehensive genomic databases, FDNA is changing the game for rare disease patients."
+\url{http://www.fdna.com}\\
+
+
+\textbf{OpenFace:}
+Quote:OpenFace is a Python and Torch implementation of face recognition with deep neural networks and is based on the CVPR 2015 paper FaceNet: A Unified Embedding for Face Recognition and Clustering by Florian Schroff, Dmitry Kalenichenko, and James Philbin at Google. Torch allows the network to be executed on a CPU or with CUDA. Freely available. \url{https://cmusatyalab.github.io/openface/}\\
+
+\textbf{IMOTIONS:} combines Emotient face expression technology with other physiological signals such EEG, eye tracking, Galvanic Skin response, etc. to improve emotion recognition accuracy
+\url{https://imotions.com/emotient/}\\
+
+\textbf{EmoVu:} Deep learning based emotion recognition software that reads facial micro expressions. Uses CNNs, Challenging covariate factors such as pose and lighting variations are mitigated by employing robust face tracking, pose normalization and synthesis, and local lighting invariant feature descriptors. Misclassification is minimized through a rigorous classification scheme comprised of decision rule/filtering, classification, and verification stages. Our classifiers are trained on a large and diverse corpus of images to account for variations in appearance across different settings. Free trial available.
+\url{http://emovu.com/e/developers/api/} \\
+
+\textbf{Kairos:} "Provides an API for analyzing facial expressions and fea- tures for emotion recognition, gender and age detection and at- tention management. (Have key for free version)"\url{https://www.kairos.com}\\
+
+\textbf{Project Oxford:} by Microsoft provides APIs for categories such as Vision, Speech, Language, Knowledge and Search. Can be tested for free.
+\url{https://azure.microsoft.com/en-us/try/cognitive-services/}\\
+
+\textbf{FaceReader:} by Noldus is widely used for academic purposes. It is a facial expression analysis software for analyzing universal emotions in addition to neutral and contempt. The software is also used to observe gaze direction and head orientation. Used more than 10,000 annotated images for training. Describes the face with 500 key points. Can be rented. 
+\url{http://www.noldus.com/human-behavior-research/products/facereader}\\
+
+\textbf{InSight} by Sightcorp is a facial expression analysis API and is also used for eye tracking, age and gender estimation, head pose estimation, etc. 2 weeks free trial.
+\url{http://sightcorp.com/insight/}\\
 
 Some papers
 
@@ -100,6 +177,7 @@ Some papers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comments
 \begin{comment}
+
 \begin{figure}[htbp]
 \centering
  \subbottom[One sub-figure]{%
@@ -109,7 +187,6 @@ Some papers
 \caption{A figure with two sub-figures!}
 \label{fig:fig2subfig}
 \end{figure}
-
 
 
 
