@@ -30,7 +30,7 @@ Co-learning explores how knowledge learning from one modality can help a computa
 \end{enumerate}
 
 \subsection{Multimodal Representations}
-
+\todo{rephrase}
 Following the work of Bengio et al. [17]
 we use the term feature and representation interchangeably, with each referring to a vector or tensor representation of an entity, be it an image, audio sample, individual word, or a sentence. A multimodal representation is a representation of data using information from multiple such entities. \cite{Baltruvsaitis2017multimodal}
 
@@ -40,6 +40,47 @@ There are different challenges when it comes to represent multimodal data: how t
 \textbf{Backbone of any multimodal model is the representation of the data!} Good representations are important for the performance of machine learning models.
 
 In \cite{Bengio2013representation} the characteristics of good representations are listed: smoothness, temporal and spatial coherence, sparsity, and natural clustering amongst others. In \cite{Srivastava2012} additional desirable properties for multimodal represenations are listed such as similarity in the representation space should reflect similarity of the corresponding concepts, the representation should be easy to obtain even in the absence of some modalities, and it should be possible to fill-in missing modalities given observed ones.
+
+Unimodal representations have been studied extensively in the past and recently a shift has been observed from hand-designed representations (e.g. SIFT) for specific applications to data-driven using f.ex. convolutional neural networks (CNN). Until recently multimodal representations involved simple concatenation of unimodal ones but this has been changing rapidly.\cite{Baltruvsaitis2017multimodal}
+
+According to \cite{Baltruvsaitis2017multimodal} there are two types of multimodal representation: joint and coordinated. 
+\subsubsection{Joint representations} combine unimodal signals into the same representation space:
+$x_m = f(x_1, \cdots, x_n),$
+multimodal representaion $x_m$ is computed using function $f$ using f.ex. a deep neural network, restricted Boltzmann machine, or a recurrent neural network that relies on unimodal representations $x_1,\cdots, x_n $. 
+Joint representations are mostly used in tasts where multimodal data is present during traininf and inference steps. One xample is early fusion which is the simple concatenation of individual modality features. More advanced methods are neural networks, graphical models and recurrent neural networks.
+
+\textbf{Neural networks} are very popular for unimodal representation such as visual, acoustic, and textual data, and are increasingly used in the mutimodal domain.
+In general, neural networks are made up of successive building blocks of inner products followed by non-linear activation functions. In order to use a neural network as a way to represent data, it is first trained to perform a specific task (e.g., recognizing objects in images). Due to the multilayer nature of deep neural networks each successive layer is hypothesized to represent the data in a more abstract way [17], hence it is common to use the final or penultimate neural layers as a form of data representation. To construct a multimodal representation using neural networks each modality starts with several individual neural layers followed by a hidden layer that projects the modalities into a joint space [9], [145], [156], [227]. The joint multimodal representation is then be passed through multiple hidden layers itself or used directly for prediction. Such models can be trained end-to-end — learning both to represent the data and to perform a particular task.
+This results in a close relationship between multimodal representation learning and multimodal fusion when using neural networks.
+The major advantage of neural network based joint representations
+comes from their often superior performance
+and the ability to pre-train the representations in an unsupervised
+manner. The performance gain is, however, dependent on the amount of data available for training. One of the disadvantages comes from the model not being able to handle missing data naturally — although there are ways to alleviate this issue [151], [217]. Finally, deep networks are often difficult to train [69], but the field is making progress in better training techniques
+
+\textbf{Probabilistic graphical models} construct representations using latent random variables. Popular approaches are deep Boltzmann machines (DBM) which stack restricted Boltzmann machines (RBM) as building blocks. Similar to neural networks, each layer represents the data at a higher level of abstraction. The advantage is that DBM do not need supervised data for training. These graphical models represten the data in a probabilistic manner, but it can be converted to deterministic neural networks with the cost of loosing the generative aspect of the model which allows to deal with missing data even if a whole modality is missing.
+\textcolor{red}{Multimodal deep belief networks } have been extended to multimodal DBMs which are able to learn joint representations from multiple modalities by merging two or more undirected graphs using a binary layer of hidden units on top of them. They allow for the low level representations of each modality to influence each other after the joint training due to the undirected nature of the model. Similar to autoencoders
+the representation can be trained in an unsupervised manner enabling the use of unlabeled data. The major disadvantage of DBMs is the difficulty of training them — high computational cost, and the need to use approximate variational training methods.
+
+\textbf{Sequential Representation} is used for data with varying length sequences such asentences, videos, or audio streams. Recurrent neural networs (RNNs) and their variants such as long-short term memory \textcolor{red}{(LSTMs)} networks have been used with success in sequence modeling across various tasks. RNNS have been used ro represent various unimodal signals such as sequences of words, audio, or images, with most succes in the language domain. Similar to traditional neural networks, the hidden state of an RNN can be seen as a representation of the data, i.e., the hidden state of RNN at timestep $t$
+can be seen as the summarization of the sequence up to that timestep.
+
+Joint representations project multimodal data into a common space and are best suited for situations when all of the modalities are present during inference. They have been extensively used for AVSR, affect, and multimodal gesture recognition.
+ 
+\subsubsection{Coordinated representations} process unimodal signals separately, but enforce certain similarity constraints on them to bring them to what we term a coordinated space.
+$f(x_1) \sim g(x_2)$,
+where each modality has a corresponding projection function ($f$ and $g$ above) that maps it into a coordinated multimodal space.
+the projection into the multimodal space is independent for each modality, but the resulting space is coordinated between them (indicated as $\sim$). Examples are minimizing cosine distance, maximizing correlation, and enforcing a partial order between the resulting spaces.
+
+There are coordinated representations that enforce similarity between representations and coordinated representations that enforce \textcolor{red}{more structure} on the resulting space. The first ones, \textbf{similarity models} minimize the distance between modalities in the coordinated space. WSABIE model was one of the earliest examples where a coordinated space was constructed for images and their annotations using a linear mapping from image and textual features such that the corresponding annotation and image representation would have a higher inner product (smaller cosine distance).
+
+Neural networks have become popoular to construct coordinated represenetations as they can jointly learn coordinated representations in an end-to-end manner. An example is DeViSE- a deep visual-semantic embedding.It uses a similar inner product and ranking loss function to WSABIE but uses more complex image and word embeddings. 
+Kiros et al. [105] extended this to
+sentence and image coordinated representation by using an LSTM model and a pairwise ranking loss to coordinate the
+feature space. Socher et al. [191] tackle the same task, but extend the language model to a dependency tree RNN to incorporate compositional semantics. A similar model was
+also proposed by Pan et al. [159], but using videos instead of images. Xu et al. [231] also constructed a coordinated space between videos and sentences using a hsubject, verb,
+objecti compositional language model and a deep video model. This representation was then used for the task of cross-modal retrieval and video description.
+
+
 
 
 \subsection{Application}
@@ -105,7 +146,7 @@ Each interaction is annotated in term of affect, collaboration and social aspect
 
 \textbf{MMDB:} We introduce the Multimodal Dyadic Behavior (MMDB) dataset, a unique collection of multimodal (video, audio, and physiological) recordings of the social and communicative behavior of toddlers. The MMDB contains 160 sessions of 3-5 minute semi-structured play interaction between a trained adult examiner and a child between the age of 15 and 30 months. Our play protocol is designed to elicit social attention, back-and-forth interaction, and non-verbal communication from the child. These behaviors reflect key socio-communicative milestones which are implicated in autism spectrum disorders. The MMDB dataset supports a novel problem domain for activity recognition, which consists of the decoding of dyadic social interactions between adults and children in a developmental context. \url{http://www.cbi.gatech.edu/mmdb/}
 
-
+\textbf{EmoReact:} A newly collected multimodal emotion dataset of children between the ages of four and fourteen years old that contains 1102 videos; the biggest dataset of its kind. These videos are annotated for 17 affective states, including six basic emotions (happiness, sadness, surprise, fear, disgust, and anger), neutral, valence and nine complex emotions including curiosity, uncertainty, excitement, attentiveness, exploration, confusion, anxiety, embarrassment and frustration. We provide a detailed analysis of the visual and vocal behaviors shown by children expressing these emotions.
 \section{Available APIs for face analysis}
 
 \textbf{Healthcare:} 
@@ -140,6 +181,26 @@ Some papers
     \item Deep Patient: an unsupervised representation to predict the future of patients from the electronic health records
 \end{itemize}
 
+
+
+
+
+\section{Stuttering}
+Questions from Stuttering Center Western Pennsylvania\\
+- What makes a person stutter on a particular word or utterance?\\
+- Which measures are most important when evaluating stuttering, and what is the most reliable way to obtain these measures?\\
+- How do we document improvements in treatment when many of the changes are "under the surface" (e.g., changes in feelings or attitudes toward speaking)?\\
+- How well does treatment work, and how does a clinician determine what type of treatment is best for a specific individual who stutters?\\
+"Many current treatments for stuttering in school-age children, adolescents, and adults are based on finding a balance between helping speakers improve their fluency through changes to speech production ("speech modification" techniques) and helping speakers improve their attitudes and feelings about stuttering to reduce the severity of stuttering ("stuttering modification" techniques). Ultimately, the goal of treatment is to reduce the overall impact of stuttering on the person's life."\\
+
+
+
+
+\section{Datasets}
+
+List existing datasets and why the one I want to create is important! \url{http://vkc.mc.vanderbilt.edu/childhoodstuttering/forscientists_datasets.html}\\
+
+paper: The UCLASS archive of stuttered speech\\
 
 
 % \subsection{Inserting Figures Wrapped with text} % (fold)
