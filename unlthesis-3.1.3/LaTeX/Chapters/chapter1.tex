@@ -13,6 +13,21 @@
 
 \section{Context}
 
+
+Communication is a crucial part of our daily lives. Through communication we exchange ideas, opinions, feelings, and much more using different channels of communication such as visual, auditory, and haptic. However, neurological disorders or traumatic brain injuries can affect speech production through abnormalities in speech motor control\cite{communicationDifficulties}. Examples of resulting disorders are dysarthria (can affect respiration, phonation, resonance, prosody, and articulation), apraxia of speech (causes difficulty in planning and coordinating movements necessary for speech), and stuttering\cite{SLPathologies}.   
+
+Besides causing difficulties in speech production, neurological disorders can also cause difficulty in expressing emotions. Patients with Parkinson's disease (PD), for instance, develop difficulties in speech production and maintaining voice quality, as well as impaired emotional facial expressiveness \cite{Ricciardi2015}.
+
+Even though the expression of emotions is not directly affected by an existing neurological problem, speech disabilities can cause frustration and reduced self-esteem which on the other hand can enhance symptoms of speech disorders. In \cite{Vanryckeghem2001} it was shown that both speech associated negative attitude and emotion increase with age and severity on children that stutter. Additionally, Vanryckeghem et al. point out that attitudinal and emotional reactions of the stutterer about his or her speech need the early and continued attention of the clinician. It is of great importance to incorporate these components in early detection, as well as intervention, in order to deal fully with the person who stutters.
+
+Given the fact that communication and emotional expression can be affected by neurological disorders as well as the influence emotional attitude can have on speech dysfluencies, I propose a multimodal analysis of the relationship between motor speech disorders and expression of emotions using machine learning techniques.
+
+
+
+
+
+
+\begin{comment} 
 Although during conversations major attention is given to the spoken content, non-verbal communication processing occurs subconsciously. Besides the verbal content of speech, it contains also non-verbal elements known as paralanguage: voice quality, rate, pitch, volume, and speaking style, prosodic features such as rhythm, intonation, and stress. But there are additional visual cues part of the non-verbal communication, namely, body language (kinesics), distance (proxemics), oculesics (eye contact, patterns of fixation, etc.), and touch (haptics). Together with paralanguage, non-verbal communication make two thirds of communication \cite{Burgoon2016}.
 
 As such an important part of communication is visual, the goal of this thesis is to collect RGB and depth video data related to communication, analyze and detect different communication features by applying image processing techniques as well as machine learning. For that purpose different study cases have been carefully selected:
@@ -37,13 +52,28 @@ Study case 3) is similar to study case 1) with the difference that there is no p
 
 All three study cases have in common the video analysis of facial activity over a temporal window and it is expected that the same image processing and machine learning tools can be applied. In the following subchapters the motivation and impact will be described.  
 
-
+\end{comment}
 
 % ==================================================================
 
 \section{Motivation} % (fold)
 \label{sec:motivation}
 
+
+
+Communication disorders affect not only one's personal well-being but can also have negative effects on one's professional career. In \cite{Ruben2000} an important role is given to communication skills in the definition of economical fitness in the 21st century. This is based on the fundamental changes that the economic basis of American society has undergone in the past century caused by a tremendous shift of the American labor force from employments depending on manual abilities to jobs requiring communication abilities. In this scenario, communication disorders present a great disadvantage. In \cite{Kruse1997} it was shown that people unable to hear are less unemployed (47.6\%) than people with difficulty in speaking understandably (67.6\%). This not only affects the lives of who has communication disabilities but also the national economy. In \cite{Ruben2000} it was concluded that communication disorders may cost the U.S. economy \$154-\$186 billion per year, which is equal to 2.5\%-3\% of the Gross National Product.
+
+
+Stuttering is one of the most known speech disorders, however, it is often misunderstood and stigmatized by society \cite{Boyle2016}. Alone in the U.S. 3 million suffer stuttering and globally 1\% is affected. Although several treatments are available, successful therapy is is not guaranteed. This is the reason why adults also can suffer from stuttering without being able to treat it completely. Additionally, the inclusion of the emotional attitude toward stuttering is not being considered in therapies, which in several studies has been pointed out as essential \cite{Vanryckeghem2001}\cite{Smith2017}\cite{Choi2016}.
+
+Also neurodegenerative diseases can affect communication, especially those difficulting motor speech control such as Parkinson's disease, Multiple Sclerosis and Amyotrophic Lateral Sclerosis. These diseases not only can cause dysarthria and apraxia of speech but can also affect emotional expression.
+
+
+By studying the mentioned motoric speech disorders (stuttering, dysarthria, apraxia of speech) using different types of data, such as video, audio and physiological signals, new insights could be gained on how emotion expression is affected by motoric speech disorders and how emotions can influence the severity of the speech disorder. 
+
+
+
+\begin{comment}
 The human face can provide several insights such as the emotional state, symptoms of diseases (pain, elevated blood pressure, facial paralysis, autism etc.), engagement in a conversation, and so on. However, the given examples are difficult to measure quantitatively and are mainly subjective.\\
 
 In 1995, Rosalind Picard first published the term affective computing which has become a growing interdisciplinary research area in the last years. The area started by the curiosity to measure the emotional state of study participants quantitatively instead of being measured by questionnaires through self-reporting \cite{Picard2014promise}. Detection and understanding of human affects have become important not only in human-computer interaction but also in areas such as medicine, literature, psychology, and marketing.\\
@@ -58,16 +88,41 @@ The same setting could also be applied to patients with facial paralysis, caused
 
 
 For both, speech therapy and facial paralysis therapy, treatment takes several months of therapy sessions in which various exercises are performed to improve weakness in oral musculature. The video monitoring during therapy combined with the analysis of face muscle performance could help therapists to follow up the progress of each patient, compare patients with similar problems and even provide therapists with quantitative measurements. The inclusion of affective computing in the face analysis system, would accquire additional information of the patient's degree of engagement during the exercises being an additional factor to a successful therapy. Through the use of different sources of data such as health records, a multimodal time series of observations is used to develop a clinical decision support system that supports therapists in providing personalized therapies.
+
+\end{comment}
 % ==================================================================
 
 
 
 \section{Research Questions}
 
-- explain research questions (1-3) and may include the hypothesis or problem to be addressed\\
-- the major approaches you will take (coneptual, theoretical, empirical and normative, as appropriate) and rationale\\
-- significance of the research (in academic and , if appropriate other fields)\\
+Altough studies were already conducted showing that mal-attitude towards stuttering is correlated to the severity of the dysfluency \cite{Vanryckeghem2001}, it has not been shown by quantitative measures, only through self-reported questionnaires. To the best knowledge of the author, research studying the relationship between stutter and the emotional state of the stutterer using physiological data and video analysis has not been published. Given the literature and technology available, the multimodal analysis of stuttering and its relationship to emotions using different sensors and machine learning techniques is a necessary logical step to confirm research outcomes based on questionnaires and to provide better understanding of the disorder. 
 
+By studying the relationship of stuttering and the emotional state of the stutterer the goal is to answer following question:
+
+\begin{enumerate}
+\item Can the severity of stuttering be reduced through emotional biofeedback?
+\end{enumerate}
+
+If the hypothesis "Severity of stuttering be reduced through emotional biofeedback" is true, a new therapy can be proposed for stutterers in which the awareness of the own emotions provided as biofeedback (sensors detect emotional state and give feedback to the user) can be used to consciously control the emotional state in order to reduce stuttering severity.\par
+
+
+Also the severity of different motor speech disorders such as dysarthria and apraxia of speech are currently defined by qualitative test as well as some of their underlying neurodegerenative diseases.
+
+By studying the relationship of the severity of motoric speech disorders in neurodegenerative disease and the emotional expressiveness of the patient through facial expressions and voice prosody the goal is to answer following question:
+
+\begin{enumerate}
+\item Can the severity of a neurodegenerative disease be estimated by the degree of emotional expressiveness through facial expressions and voice prosody?
+\end{enumerate}
+
+
+
+For both research questions, data will be collected using different modalities (video, audio, EEG, EDA) during speech assessments defined with Speech and Language Pathologists. The collected data will then be analyzed with machine learning techniques.
+
+
+
+
+\begin{comment}
 The goal of this thesis is to analyze facial activity, produced by speech therapy exercises and facial paralysis exercises, recorded by RGB, depth, and infrared cameras during several therapy sessions in order to develop a clinical decision support system that uses multimodal data to support health professionals in their decisions through exercise suggestions.
 
 As seen in Fig.~\ref{fig:project}, the scope of this work is limited on exploring feature representations for video data and introducing text information into the machine learning framework, which is also part of this thesis, in order to represent progress done by the patient on different time instants (temporal modeling). In the following, the milestones to reach the goal of this thesis will be presented and explained. \\
@@ -77,25 +132,34 @@ As seen in Fig.~\ref{fig:project}, the scope of this work is limited on explorin
 
 \textbf{Hypothesis 2 -} 
 
-\begin{comment}
+%\begin{comment}
 Considering clinical medical data existing in the Electronic Health Records, in particular, multimodal time series of data from health sensors and medical notes collected at each patient visit, we wish to recognize health/clinical patterns to support health professionals in their decisions through (i) suggestions and (ii) similar examples.
+%\end{comment}
+
 \end{comment}
-
-
 
 % ==================================================================
 
 \section{Objectives}
 
+The aim of this study is to understand how emotions are related to speech. For that purpose data will be collected using different sensors: RGB, depth, thermal, audio, EEG (electroencephalogram), and EDA (electrodermal activity). The data will be collected from healthy subjects and from stutterers, both in the age range 20-40 years.
 
-- What do you want to know, prove, demonstrate, analyse, test, investigate or examine?\\
-- List aims in a logical sequence
+By understanding the influence of emotions on stuttering, a therapy with emotional biofeedback can be designed. To study the effectiveness of such a therapy, several stuttering adults will be followed through their therapy by collecting data. This would enable the analysis of temporal progress during therapy.
+
+Through collection of data of patients suffering dysarthria or apraxia of speech caused by neurodegerenative diseases, the aim is to understand if the measurement of emotional expressiveness can be used as an indicator for the severity of underlying diseases.
+
+The goal of using different modalities is to gain insight whether through data fusion, classification results can be improved or whether single modalities carry sufficient information for correct classification.
+
 
 % ==================================================================
-\section{Challenges and Impact}
+
 \begin{comment}
+\section{Challenges and Impact}
+%\begin{comment}
 what is a normal manner of speaking? Can such a manner be defined?
-\end{comment}
+%\end{comment}
+
+
 A Clinical Decision Support for SLTs would be a valuable additional tool as it would suggest therapists next exercises for the patient based on his/her progress and those of patients with similar problems. Through the availability of multimodal data, new insights can be gained to develop and improve personalized therapies. By analyzing the therapy progress and comparing it with those of patients with similar problems and learning rate, the therapy length could be predicted which is an interesting information for the therapist.
 2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
 
@@ -112,7 +176,7 @@ New insights of speech disorders can be obtained, as well as quantitative measur
 \textbf{Challenge 2- Mathematical representation of different modalities and temporal information.} More details after writing state-of-the-art. \\
 
 \textbf{Impact 2} A feature space that can represent the progress of different measurements over time can be used in several applications. More details after writing state-of-the-art.\\
-
+\end{comment}
 % ==================================================================
 
 
