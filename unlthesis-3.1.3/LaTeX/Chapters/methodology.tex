@@ -3,54 +3,71 @@
 
 
 
-Anticipate the methods you will use to achieve the project aims and show that project is feasible in the time period.
+\section{Expertise Consulting}
 
-\section{Data}
+As the proposed project is interdisciplinary, it is necessary to create contacts to medical centers where expertise about stuttering, dysarthria and apraxia of speech caused by underlying neurodegenerateive diseases can be found.
 
-\subsection{Available Datasets}
+Expertise in dysfluency can be found at the Stuttering Center of Western Pennsylvania which is located in Pittsburgh. It works in collaboration with the Department of Audiology and Speech-Language Pathology at Children's Hospital of Pittsburgh of UPMC and the Department of Communication Science and Disorders at the University of Pittsburgh. It is an institution which is open to research concerning stuttering. Dr. J. Scott Yaruss, Director of the Stuttering Center, is the responsable contact for research cooperations (jsyaruss@pitt.edu).
 
-TORGO Database of Dysarthric Articulation
 
-UA-Speech Database
+At the University of Pittsburgh Voice Center Rita Hersan, MS, CCC-SLP, is an expert in speech therapy for patients with Parkinson's disease. She is a certified clinician for Lee Silverman Voice Treatment, an innovative and clinically-proven method for improving voice and speech in individuals with Parkinson's disease. Additional information can be obtained from the Department of Neurology of the University of Pittsburgh, where several neurodegenerative diseases causing movement disorders are treated (
+\url{http://www.neurology.upmc.edu/movement/}). Furthermore, it has been designated by the American Parkinson Disease Association (APDA (\url{https://www.apdaparkinson.org})) as one of only eight Advanced Centers for Parkinson’s Disease Research in the nation.
 
-AVEC 2016 multimodal dataset \url{http://sspnet.eu/avec2016/challenge-guidelines/}, \url{http://sspnet.eu/avec2016/}
-Depression subchallenge: SimSensei corpus of human-agent interactions\\
-Emotion subchallenge: RECOLA multimodal corpus of remote and collaborative affective interactions (audio-visual-physiological emotion recognition.)\\
 
-AVEC 2017: \\
-Emotion Sub-Challenge data: SEWA \url{https://db.sewaproject.eu}\\
-Depression Sub-Challenge data: DAIC-WOZ Depression Database \url{http://dcapswoz.ict.usc.edu/wwwutil_files/DAICWOZDepression_Documentation.pdf}
 
-\subsection{Creation of own Dataset}
-- Fieldwork required: where, how long and at what intervals?
+
+
+
+
+
+
+
+\section{Creation of Multimodal Baseline}
+
+Available datasets will be used to create baselines for emotion classification. The RECOLA multimodal corpus used in the AVEC 2016 emotion sub-challenge contains data of remote and collaborative affective interactions. It contains audio-visual and physiological data for emotion recognition. To create a multimodal baseline, toolboxes mentioned in \ref{sec:toolbox} will be used to create hand-crafted features. The features will be used for unimodal supervised classification as well as for data fusion and multimodal supervised classification.  The results can be evaluated using the F1-score, precision and recall.
+
+As baseline to detect distress, anxiety and depression, the DAIC-WOZ database ( \url{http://dcapswoz.ict.usc.edu/wwwutil_files/DAICWOZDepression_Documentation.pdf}) from AVEC 2016 will be used. It contains
+clinical interviews designed to support the diagnosis of psychological
+distress conditions such as anxiety, depression,
+and post-traumatic stress disorder \cite{Valstar2016avec}. The same methods will be applied as for the first dataset.
+
+The creation of a multimodal baseline using existing datasets has several advantages. Time is saved in data collection, several researchers used the dataset and results and methods are published, implementation mistakes can be detected through comparison with the results of other researchers.
+
+
+
+\section{Creation of own Dataset}
+
+With the support of the experts mentioned, experimental protocols will be designed to collect data from stutterers as well as from health subjects as control group. The goal is to create an experimental protocol which can be identically reproduced. For this purpose the indication of the exercises should be recorded or come from an computerized assistant which is displayed on a monitor. After each exercises the subject will be asked to inform his emotional state. Data will be recorded using the devices shown in \ref{sec:hardware}. Stuttering occurence as well as prolongations can be labeled manually also by non-experts.
+
+To monitor the progress of a stuttering therapy supported by emotional biofeedback, two groups will be recorded. Subjects of the first group, perform the exercises without emotional biofeedback. Subjects of the second group, receive emotional biofeedback. After each exercises the subject will be asked to inform his emotional state. 
+
+
+For the second study case patients with dysarthria or apraxia of speech will be recorded (speech disorder will be defined after consulting experts).
 
 
 \section{Toolboxes}
+\label{sec:toolbox}
+
+OpenFace will be used for face detection. It is a free and open source face recognition with implemented deep neural networks \cite{Amos2016openface}.
+
+OpenSmile is feature extraction tool which permits the extraction of large audio feature spaces in realtime. It combines features from Music Information Retrieval and Speech Processing \url{http://audeering.com/technology/opensmile/}.
+
+Skikit-learn toolbox \url{http://scikit-learn.org/} is written in Python and implements different machine learning classifiers.
 
 
 \section{Hardware}
+\label{sec:hardware}
+Kinect, thermal camera, Safilo X smart glasses with integrated EEG sensor, Affectiva bracelet for EDA analysis. 
+
+\todo{describe each hardware}
 
 
 
-
-
-\section{Expertise Consulting}
-
-Stuttering Center of Western Pennsylvania is a collaboration between the Department of Audiology and Speech-Language Pathology at Children's Hospital of Pittsburgh of UPMC and the Department of Communication Science and Disorders at the University of Pittsburgh. Contact Dr. J. Scott Yaruss, Director of the Stuttering Center,jsyaruss@pitt.edu.\\
-
-
-University of Pittsburgh Voice Center : Rita Hersan, MS, CCC-SLP. She is a certified clinician for Lee Silverman Voice Treatment, an innovative and clinically-proven method for improving voice and speech in individuals with Parkinson disease. Ms. Hersan is also the co-author of Adventures in Voice, a specific program for children with voice disorders.\url{http://www.surgery.pitt.edu/centers-excellence/voice-center/meet-voice-center}
-\\
-
-Department of Neurology, University of Pittsburgh.
-\url{http://www.neurology.upmc.edu/movement/}
-
-
-
-Associations:
-\url{https://www.apdaparkinson.org}
 
 
 \section{Ethics Commission}
 
-\section{Possible Difficulties}
+As the data will be collected from humans, the experimental protocol needs to be evaluated by the ethics commission of CMU.
+
+
+%\section{Possible Difficulties}
