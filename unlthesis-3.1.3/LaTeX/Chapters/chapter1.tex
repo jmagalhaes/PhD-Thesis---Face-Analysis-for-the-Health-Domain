@@ -60,31 +60,13 @@ The same setting could also be applied to patients with facial paralysis, caused
 For both, speech therapy and facial paralysis therapy, treatment takes several months of therapy sessions in which various exercises are performed to improve weakness in oral musculature. The video monitoring during therapy combined with the analysis of face muscle performance could help therapists to follow up the progress of each patient, compare patients with similar problems and even provide therapists with quantitative measurements. The inclusion of affective computing in the face analysis system, would accquire additional information of the patient's degree of engagement during the exercises being an additional factor to a successful therapy. Through the use of different sources of data such as health records, a multimodal time series of observations is used to develop a clinical decision support system that supports therapists in providing personalized therapies.
 % ==================================================================
 
-\section{Challenges and Impact}
-\begin{comment}
-what is a normal manner of speaking? Can such a manner be defined?
-\end{comment}
-A Clinical Decision Support for SLTs would be a valuable additional tool as it would suggest therapists next exercises for the patient based on his/her progress and those of patients with similar problems. Through the availability of multimodal data, new insights can be gained to develop and improve personalized therapies. By analyzing the therapy progress and comparing it with those of patients with similar problems and learning rate, the therapy length could be predicted which is an interesting information for the therapist.
-2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
-
-\textbf{Long-term vision- How to provide SLTs with exercises suggestions based on the analysis of the patient history and previous knowledge?} More details after writing state-of-the-art.
-
-To fullfil this vision I shall address two research challenges:
-
-\textbf{Challenge 1- Relate facial muscle activity to speech (Portuguese and/or U.S. English) using RGB, depth and infrared video data.}
-In the literature, to the best knowledge of the writer, databases with all three modalities recording speech exercises were not found. Besides obtaining/creating such a data set, the biggest challenge will be to develop image processing features that are robust to different light conditions, background, skin color and age of the patient. Additonally, a machine learning algorithm needs to be found that can map facial activity to speech production (study case 1) and degree of facial paralysis (study case 3).
-
-\textbf{Impact 1}
-New insights of speech disorders can be obtained, as well as quantitative measures which in speech therapy and in the diagnoses of facial paralysis are currently are not sufficiently feasible. Besides that, the creation of a visual database would enable the therapist to review the progress of the therapy visually and not just with text annotations. \\
-
-\textbf{Challenge 2- Mathematical representation of different modalities and temporal information.} More details after writing state-of-the-art. \\
-
-\textbf{Impact 2} A feature space that can represent the progress of different measurements over time can be used in several applications. More details after writing state-of-the-art.\\
-
-% ==================================================================
 
 
 \section{Research Questions}
+
+- explain research questions (1-3) and may include the hypothesis or problem to be addressed\\
+- the major approaches you will take (coneptual, theoretical, empirical and normative, as appropriate) and rationale\\
+- significance of the research (in academic and , if appropriate other fields)\\
 
 The goal of this thesis is to analyze facial activity, produced by speech therapy exercises and facial paralysis exercises, recorded by RGB, depth, and infrared cameras during several therapy sessions in order to develop a clinical decision support system that uses multimodal data to support health professionals in their decisions through exercise suggestions.
 
@@ -106,7 +88,30 @@ Considering clinical medical data existing in the Electronic Health Records, in 
 \section{Objectives}
 
 
+- What do you want to know, prove, demonstrate, analyse, test, investigate or examine?\\
+- List aims in a logical sequence
 
+% ==================================================================
+\section{Challenges and Impact}
+\begin{comment}
+what is a normal manner of speaking? Can such a manner be defined?
+\end{comment}
+A Clinical Decision Support for SLTs would be a valuable additional tool as it would suggest therapists next exercises for the patient based on his/her progress and those of patients with similar problems. Through the availability of multimodal data, new insights can be gained to develop and improve personalized therapies. By analyzing the therapy progress and comparing it with those of patients with similar problems and learning rate, the therapy length could be predicted which is an interesting information for the therapist.
+2) impact of emotional state of the patient can be taken into account and explain fast/slow progress.\\
+
+\textbf{Long-term vision- How to provide SLTs with exercises suggestions based on the analysis of the patient history and previous knowledge?} More details after writing state-of-the-art.
+
+To fullfil this vision I shall address two research challenges:
+
+\textbf{Challenge 1- Relate facial muscle activity to speech (Portuguese and/or U.S. English) using RGB, depth and infrared video data.}
+In the literature, to the best knowledge of the writer, databases with all three modalities recording speech exercises were not found. Besides obtaining/creating such a data set, the biggest challenge will be to develop image processing features that are robust to different light conditions, background, skin color and age of the patient. Additonally, a machine learning algorithm needs to be found that can map facial activity to speech production (study case 1) and degree of facial paralysis (study case 3).
+
+\textbf{Impact 1}
+New insights of speech disorders can be obtained, as well as quantitative measures which in speech therapy and in the diagnoses of facial paralysis are currently are not sufficiently feasible. Besides that, the creation of a visual database would enable the therapist to review the progress of the therapy visually and not just with text annotations. \\
+
+\textbf{Challenge 2- Mathematical representation of different modalities and temporal information.} More details after writing state-of-the-art. \\
+
+\textbf{Impact 2} A feature space that can represent the progress of different measurements over time can be used in several applications. More details after writing state-of-the-art.\\
 
 % ==================================================================
 
