@@ -1,7 +1,5 @@
-\chapter{Methodology}
+\chapter{Research Methods}
 \label{cha:methods}
-
-
 
 \section{Expertise Consulting}
 
@@ -9,16 +7,40 @@ As the proposed project is interdisciplinary, it is necessary to create contacts
 
 Expertise in dysfluency can be found at the Stuttering Center of Western Pennsylvania which is located in Pittsburgh. It works in collaboration with the Department of Audiology and Speech-Language Pathology at Children's Hospital of Pittsburgh of UPMC and the Department of Communication Science and Disorders at the University of Pittsburgh. It is an institution which is open to research concerning stuttering. Dr. J. Scott Yaruss, Director of the Stuttering Center, is the responsable contact for research cooperations (jsyaruss@pitt.edu).
 
-
 At the University of Pittsburgh Voice Center Rita Hersan, MS, CCC-SLP, is an expert in speech therapy for patients with Parkinson's disease. She is a certified clinician for Lee Silverman Voice Treatment, an innovative and clinically-proven method for improving voice and speech in individuals with Parkinson's disease. Additional information can be obtained from the Department of Neurology of the University of Pittsburgh, where several neurodegenerative diseases causing movement disorders are treated (
 \url{http://www.neurology.upmc.edu/movement/}). Furthermore, it has been designated by the American Parkinson Disease Association (APDA (\url{https://www.apdaparkinson.org})) as one of only eight Advanced Centers for Parkinson’s Disease Research in the nation.
 
+\section{Data Collection and Ethitcs}
+\subsection{Ethics Commission}
+
+As the data will be collected from humans, the experimental protocol needs to be evaluated by the ethics commission of CMU.
+
+\subsection{Creation of own Dataset}
+
+With the support of the experts mentioned, experimental protocols will be designed to collect data from stutterers as well as from health subjects as control group. The goal is to create an experimental protocol which can be identically reproduced. For this purpose the indication of the exercises should be recorded or come from an computerized assistant which is displayed on a monitor. After each exercises the subject will be asked to inform his emotional state. Data will 
+be recorded using the devices shown in \ref{sec:hardware}. Stuttering occurence as well as prolongations can be labeled manually also by non-experts.
+
+To monitor the progress of a stuttering therapy supported by emotional biofeedback, two groups will be recorded. Subjects of the first group, perform the exercises without emotional biofeedback. Subjects of the second group, receive emotional biofeedback. After each exercises the subject will be asked to inform his emotional state. 
 
 
+For the second study case patients with dysarthria or apraxia of speech will be recorded (speech disorder will be defined after consulting experts).
 
 
+\section{Software Architecture}
+\label{sec:toolbox}
+
+OpenFace will be used for face detection. It is a free and open source face recognition with implemented deep neural networks \cite{Amos2016openface}.
+
+OpenSmile is feature extraction tool which permits the extraction of large audio feature spaces in realtime. It combines features from Music Information Retrieval and Speech Processing \url{http://audeering.com/technology/opensmile/}.
+
+Skikit-learn toolbox \url{http://scikit-learn.org/} is written in Python and implements different machine learning classifiers.
 
 
+\section{Hardware setup}
+\label{sec:hardware}
+Kinect, thermal camera, Safilo X smart glasses with integrated EEG sensor, Affectiva bracelet for EDA analysis. 
+
+\todo{describe each hardware}
 
 
 
@@ -32,42 +54,6 @@ distress conditions such as anxiety, depression,
 and post-traumatic stress disorder \cite{Valstar2016avec}. The same methods will be applied as for the first dataset.
 
 The creation of a multimodal baseline using existing datasets has several advantages. Time is saved in data collection, several researchers used the dataset and results and methods are published, implementation mistakes can be detected through comparison with the results of other researchers.
-
-
-
-\section{Creation of own Dataset}
-
-With the support of the experts mentioned, experimental protocols will be designed to collect data from stutterers as well as from health subjects as control group. The goal is to create an experimental protocol which can be identically reproduced. For this purpose the indication of the exercises should be recorded or come from an computerized assistant which is displayed on a monitor. After each exercises the subject will be asked to inform his emotional state. Data will be recorded using the devices shown in \ref{sec:hardware}. Stuttering occurence as well as prolongations can be labeled manually also by non-experts.
-
-To monitor the progress of a stuttering therapy supported by emotional biofeedback, two groups will be recorded. Subjects of the first group, perform the exercises without emotional biofeedback. Subjects of the second group, receive emotional biofeedback. After each exercises the subject will be asked to inform his emotional state. 
-
-
-For the second study case patients with dysarthria or apraxia of speech will be recorded (speech disorder will be defined after consulting experts).
-
-
-\section{Toolboxes}
-\label{sec:toolbox}
-
-OpenFace will be used for face detection. It is a free and open source face recognition with implemented deep neural networks \cite{Amos2016openface}.
-
-OpenSmile is feature extraction tool which permits the extraction of large audio feature spaces in realtime. It combines features from Music Information Retrieval and Speech Processing \url{http://audeering.com/technology/opensmile/}.
-
-Skikit-learn toolbox \url{http://scikit-learn.org/} is written in Python and implements different machine learning classifiers.
-
-
-\section{Hardware}
-\label{sec:hardware}
-Kinect, thermal camera, Safilo X smart glasses with integrated EEG sensor, Affectiva bracelet for EDA analysis. 
-
-\todo{describe each hardware}
-
-
-
-
-
-\section{Ethics Commission}
-
-As the data will be collected from humans, the experimental protocol needs to be evaluated by the ethics commission of CMU.
 
 
 %\section{Possible Difficulties}
