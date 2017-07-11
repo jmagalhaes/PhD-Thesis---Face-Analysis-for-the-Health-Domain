@@ -55,15 +55,66 @@ first={\glsentrylong{acc}}(\glsentryshort{acc}),
 	firstplural={\glsentrylong{acc}\glspluralsuffix\ (\glsentryname{acc}\glspluralsuffix )}
 }
 
-\newglossaryentry{als} {
+\newglossaryentry{alsg} {
 	name={Amyotrophic Lateral Sclerosis}, 
-	short={ALS},
-	description={ALS is a neurological disease resulting in progressive muscle weakness and atropy and is commonly called Lou Gehrig disease. (\cite{SLPathologies} p.33)
-},
-first={\glsentrylong{als}}(\glsentryshort{als}),
-	long={Amyotrophic Lateral Sclerosis},
-	firstplural={\glsentrylong{als}\glspluralsuffix\ (\glsentryname{als}\glspluralsuffix )}
+	%short={ALS},
+	description={ALS is a neurological disease resulting in progressive muscle weakness and atrophy and is commonly called Lou Gehrig disease. (\cite{SLPathologies} p.33)
+}%,
+%first={\glsentrylong{als}}(\glsentryshort{als}),
+%	long={Amyotrophic Lateral Sclerosis},
+%	firstplural={\glsentrylong{als}\glspluralsuffix\ (\glsentryname{als}\glspluralsuffix )}
 }
+
+\newglossaryentry{als}{
+type=\acronymtype,
+name={ALS},
+description={Amyotrophic Lateral Sclerosis, \glsseeformat[Glossary:]{alsg}{}},
+first={Amyotrophic Lateral Sclerosis (ALS)\glsadd{alsg}}
+}
+
+
+
+\newglossaryentry{hdg} {
+	name={Huntington's disease}, 
+	%short={ALS},
+	description={todo}
+}
+
+\newglossaryentry{hd}{
+type=\acronymtype,
+name={HD},
+description={Huntington's disease, \glsseeformat[Glossary:]{hdg}{}},
+first={Huntington's disease (HD)\glsadd{hdg}}
+}
+
+
+
+
+\newglossaryentry{adg} {
+	name={Alzheimer's disease}, 
+	%short={ALS},
+	description={todo}
+}
+
+\newglossaryentry{ad}{
+type=\acronymtype,
+name={AD},
+description={Alzheimer's disease, \glsseeformat[Glossary:]{adg}{}},
+first={Alzheimer's disease (AD)\glsadd{adg}}
+}
+
+
+
+\newglossaryentry{slp}{
+type=\acronymtype,
+name={SLP},
+description={Speech and Language Pathologist},
+first={Speech and Language Pathologist (SLP)},
+plural={SLPs},
+descriptionplural={Speech and Language Pathologists},
+firstplural={\glsentrydescplural{slp} (\glsentryplural{slp})}
+}
+
 
 \newglossaryentry{aphasia} {
 	name={aphasia}, 
@@ -73,7 +124,7 @@ first={\glsentrylong{als}}(\glsentryshort{als}),
 
 
 \newglossaryentry{apraxia} {
-	name={apraxia}, 
+	name={Apraxia}, 
 	description={Apraxia of speech is a motor speech disorder characterized by difficulty planning, sequencing, and organizing motor or muscle movements specifically for the production of speech. The patient may have trouble forming words or speaking despite the ability to use the oral and facial muscles to make sounds. Apraxia of speech is caused by damage to the parts of the brain
 that control muscle movement. There are two main types of speech apraxia: acquired apraxia of speech and childhood apraxia of speech (CAS).(\cite{SLPathologies} p.34)
 }
@@ -107,14 +158,21 @@ first={\glsentrylong{asd}}(\glsentryshort{asd}),
 	firstplural={\glsentrylong{asd}\glspluralsuffix\ (\glsentryname{asd}\glspluralsuffix )}
 }
 
-\newglossaryentry{cp} {
+\newglossaryentry{cpg} {
 	name={Cerebral Palsy}, 
-	short={CP},
+	%short={CP},
 	description={Cerebral palsy (CP) is a movement disorder caused by damage to the brain before, during, or soon after birth. The ability of people with CP to communicate effectively is often impaired by problems with speech and gestures commonly used in communication. Communication difficulties associated with cerebral palsy can be multifactorial, arising from motor, intellectual, and/or sensory impairments, and children with this diagnosis can experience mild to severe difficulties in expressing themselves and in swallowing.They are often referred for speech and language therapy services to maximize their communication and swallowing skills and help them to take a role that is as independent as possible.(\cite{SLPathologies} p.37)
-},
-first={\glsentrylong{cp}}(\glsentryshort{cp}),
-	long={Cerebral Palsy},
-	firstplural={\glsentrylong{cp}\glspluralsuffix\ (\glsentryname{cp}\glspluralsuffix )}
+}%,
+%first={\glsentrylong{cp}}(\glsentryshort{cp}),
+%	long={Cerebral Palsy},
+%	firstplural={\glsentrylong{cp}\glspluralsuffix\ (\glsentryname{cp}\glspluralsuffix )}
+}
+
+\newglossaryentry{cp}{
+type=\acronymtype,
+name={CP},
+description={Cerebral Palsy, \glsseeformat[Glossary:]{cpg}{}},
+first={Cerebral Palsy (CP)\glsadd{cpg}}
 }
 
 \newglossaryentry{cogn_comm_dis} {
@@ -130,25 +188,32 @@ first={\glsentrylong{cp}}(\glsentryshort{cp}),
 }
 
 \newglossaryentry{dysarthria} {
-	name={dysarthria}, 
+	name={Dysarthria}, 
 	description={Dysarthria represents a group of motor speech disorders characterized by weakness, slowness, and/or lack of coordination of the speech musculature as the result of damage to the central or peripheral nervous system. Phonation, respiration, resonance, articulation, and prosody are affected. Movements may be impaired in force, timing, endurance, direction, and range of motion. Symptoms may include slurred speech, weak or imprecise articulatory contacts, weak respiratory support, low volume, incoordination of the respiratory stream, hypernasality, and reduced intelligibility. (\cite{SLPathologies} p.40)
 }
 }
 
 \newglossaryentry{dysphagia} {
-	name={dysphagia}, 
+	name={Dysphagia}, 
 	description={Dysphagia, or difficulty in swallowing, can result in choking, pulmonary problems, inadequate nutrition and hydration, and weight loss. It can cause food to enter the airway that may lead to complications including death from aspiration pneumonia. For infants, difficulties in sucking and breathing, in addition to swallowing, severely compromise nutrition. For children, lack of weight gain is like weight loss in adults. Children may refuse specific foods and textures because of reduced oral motor skills. Causes of dysphagia include TBI, stroke, central nervous system infection, head and neck cancer, effects of radiation, degenerative diseases, congenital conditions (e.g., cerebral palsy), anatomic and structural problems (e.g., cleft palate), and psychosocial and behavioral issues. (\cite{SLPathologies} p.41)
 }
 }
 
-\newglossaryentry{ms} {
+\newglossaryentry{msg} {
 	name={Multiple Sclerosis}, 
-	short={MS},
-	description={Rehabilitation is considered a necessary component of comprehensive, quality health care for people with multiple sclerosis (MS), at all stages of the disease (National Multiple Sclerosis Society, n.d.). People with MS often have swallowing difficulties as well as speech problems. Cognitive skills and memory can also be impaired. Dysarthria, in which speech patterns may be disrupted or words slurred, occurs in approximately 40\% of all patients with MS (Merson & Rolnick, 1998). When speech and voice disturbances do occur, they usually present as a spasticataxic dysarthria with disorders of voice intensity, voice quality, articulation, and intonation. Treating dysarthria, dysphagia, and cognitive deficits in MS patients is effective for reestablishing functional daily activities. (\cite{SLPathologies} p.45)
-},
-first={\glsentrylong{ms}}(\glsentryshort{ms}),
-	long={Multiple Sclerosis},
-	firstplural={\glsentrylong{ms}\glspluralsuffix\ (\glsentryname{ms}\glspluralsuffix )}
+	%short={MS},
+	description={Rehabilitation is considered a necessary component of comprehensive, quality health care for people with multiple sclerosis (MS), at all stages of the disease (National Multiple Sclerosis Society, n.d.). People with MS often have swallowing difficulties as well as speech problems. Cognitive skills and memory can also be impaired. Dysarthria, in which speech patterns may be disrupted or words slurred, occurs in approximately 40\% of all patients with MS (Merson \& Rolnick, 1998). When speech and voice disturbances do occur, they usually present as a spasticataxic dysarthria with disorders of voice intensity, voice quality, articulation, and intonation. Treating dysarthria, dysphagia, and cognitive deficits in MS patients is effective for reestablishing functional daily activities. (\cite{SLPathologies} p.45)
+}%,
+%first={\glsentrylong{ms}}(\glsentryshort{ms}),
+%	long={Multiple Sclerosis},
+%	firstplural={\glsentrylong{ms}\glspluralsuffix\ (\glsentryname{ms}\glspluralsuffix )}
+}
+
+\newglossaryentry{ms}{
+type=\acronymtype,
+name={MS},
+description={Multiple Sclerosis, \glsseeformat[Glossary:]{msg}{}},
+first={Multiple Sclerosis (MS)\glsadd{msg}}
 }
 
 \newglossaryentry{neuro_motorspeech} {
@@ -157,10 +222,22 @@ first={\glsentrylong{ms}}(\glsentryshort{ms}),
 }
 }
 
-\newglossaryentry{parkinson} {
-	name={Parkinson’s Disease}, 
+\newglossaryentry{pdg} {
+	name={Parkinson’s disease},
+%	short={PD},
 	description={Many people with Parkinson's disease suffer from disorders of speech and voice. Cognitive skills and memory can also be impaired. These disorders are typically characterized by speech and voice that are monotonous, quiet, hoarse, and breathy. People with Parkinson's disease also tend to give fewer non-verbal cues, such as facial expressions and hand gestures. These disabilities tend to increase as the disease progresses and can lead to serious problems with communication and swallowing. (\cite{SLPathologies} p.47)
+},
+%first={\glsentrylong{pd}}(\glsentryshort{pd}),
+%	long={Parkinson’s disease}
+	%firstplural={\glsentrylong{pd}\glspluralsuffix\ (\glsentryname{pd}\glspluralsuffix )}
 }
+
+\newglossaryentry{pd}{
+type=\acronymtype,
+name={PD},
+description={Parkinson’s disease, \glsseeformat[Glossary:]{pdg}{}},
+first={Parkinson’s disease (PD)\glsadd{pdg}},
+%see=[Glossary:]{pdg}
 }
 
 \newglossaryentry{social_comm_dis} {
@@ -189,23 +266,29 @@ first={\glsentrylong{ms}}(\glsentryshort{ms}),
 }
 }
 
-\newglossaryentry{tbi} {
+\newglossaryentry{tbig} {
 	name={Traumatic Brain Injury}, 
-	short={TBI},
+	%short={TBI},
 	description={Traumatic brain injury (TBI) can result in lifelong impairment of physical, cognitive, and psychosocial functioning. Adults and children who have experienced a TBI frequently exhibit cognitive-communication disorders. Communication requires a complex interplay between cognition, language, and speech, with cognitive processes ranging from basic to complex and includes attention, memory, reasoning, and executive functions. Communication involves listening, reading, writing, speaking, and gesturing at all levels of language. Speech-language pathologists provide cognitive-communication treatment to TBI patients through evaluation of specific language and cognitive deficits and development of an intervention program. (\cite{SLPathologies} p.49)
-},
-first={\glsentrylong{tbi}}(\glsentryshort{tbi}),
-	long={Traumatic Brain Injury},
-	firstplural={\glsentrylong{tbi}\glspluralsuffix\ (\glsentryname{tbi}\glspluralsuffix )}
+}%,
+%first={\glsentrylong{tbi}}(\glsentryshort{tbi}),
+%	long={Traumatic Brain Injury},
+%	firstplural={\glsentrylong{tbi}\glspluralsuffix\ (\glsentryname{tbi}\glspluralsuffix )}
 }
 
+\newglossaryentry{tbi}{
+type=\acronymtype,
+name={TBI},
+description={Traumatic Brain Injury, \glsseeformat[Glossary:]{tbig}{}},
+first={Parkinson’s disease (PD)\glsadd{tbig}}
+}
 
 \newglossaryentry{vpd} {
 	name={Velopharyngeal Dysfunction}, 
 	short={VPD},
 	description={The purpose of the velopharyngeal mechanism is to close off the nasal cavity from the oral cavity during speech, normalizing both resonance and articulation for pressure sensitive phonemes. Closure is accomplished by the action of the velum, the lateral pharyngeal walls, and the posterior pharyngeal walls. Failure of these muscles to close during speech tasks results in velopharyngeal dysfunction (VPD). VPD also allows for the leakage of air into the nasal cavity, thus causing nasal resonance and reduced oral pressure. Resonance can be assessed as normal, hypernasal, hyponasal, or mixed hyper/hyponasal. The presence of hypernasality (too much sound resonating in the nasal cavity during speech, usually on vowels and voiced oral consonants) is often prevalent in this disorder. Audible nasal emission of air through the nasal cavity during oral pressure consonants may also be a finding. (\cite{SLPathologies} p.50)
 },
-first={\glsentrylong{ms}}(\glsentryshort{vpd}),
-	long={Velopharyngeal Dysfunction},
-	firstplural={\glsentrylong{vpd}\glspluralsuffix\ (\glsentryname{vpd}\glspluralsuffix )}
+%first={\glsentrylong{ms}}(\glsentryshort{vpd}),
+%	long={Velopharyngeal Dysfunction},
+%	firstplural={\glsentrylong{vpd}\glspluralsuffix\ (\glsentryname{vpd}\glspluralsuffix )}
 }

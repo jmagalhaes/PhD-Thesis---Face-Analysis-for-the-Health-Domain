@@ -6,10 +6,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Communication Fundamentals}
 \label{cha:fundamentals}
+\acresetall
+
 
 As described in the introductory chapter, face expression analysis is an interdisciplinary research area. To permit the reader a better understanding of the state-of-the-art, this chapter covers fundamental knowledge of the different research areas involved in this project. 
 
-This chapter starts by explaining the importance of communication nowadays and the communication problems that exist in our societies, why communication skills are gaining more and more importance, not only on a personal level but also on an economical level and how speech and language therapists (SLTs) work to prevent, diagnose and treat speech and language disorders.
+This chapter starts by explaining the importance of communication nowadays and the communication problems that exist in our societies, why communication skills are gaining more and more importance, not only on a personal level but also on an economical level and how \glsplural{slp} work to prevent, diagnose and treat speech and language disorders.
 
 In chapter~\ref{sec:anatomy} an overview of the anatomy essential to communicate verbally as well as non-verbally is presented. Based on the facial muscle activity during speech and facial expressions, in chapter~\ref{sec:compRepresentation} non-invasive methods are shown to detect facial activity using images from different modalities, such as RGB, thermal, and depth cameras.
 
@@ -31,11 +33,11 @@ Two main types of communication exist: verbal and non-verbal. The first one refe
  \label{fig:humanCommunication}
  \end{figure} 
 
-Nevertheless, pathologies exist which hinder the proper encoding or decoding of communicated information. Some disorders which cause difficulties in communicating are autism, brain tumours, dementia (ex. Alzheimer's disease), Parkinson's disease, Huntington's disease, Multiple Sclerosis, and Epilepsy. All voice, language, speech, and swallowing problems make part of communication disorders and can be classified into speech and language disorders (more information in chapter~\ref{sec:SLP}). 
+Nevertheless, pathologies exist which hinder the proper encoding or decoding of communicated information. Some disorders which cause difficulties in communicating are autism, brain tumours, dementia (ex. \gls{ad}), \gls{pd}, \gls{hd}, \gls{ms}, and Epilepsy. All voice, language, speech, and swallowing problems make part of communication disorders and can be classified into speech and language disorders (more information in chapter~\ref{sec:SLP}). 
 
-In \cite{Ruben2000}, Robert Ruben predicts that communication disorders will be a major public health challenge for the 21st century. According to Ruben, the economic basis of American society has undergone fundamental changes. In the beginning of the last century, at least 80\% of the American labor force were employed in tasks that depended on manual habilities. However, at the end of the same century already 62\% of the American labor force work in jobs using skills based on their communication abilities and of the remaining 37\% which are defined as farming and blue collar, many are also dependent on their communication abilities, as farmers have becoe farm managers. In this scenario, communication disorders present a great disadvantage. It has been estimated that communication disorders have a prevalence of 5\% to 10\% and that people suffering from them are economically more disadvantaged than those with hearing loss or other disabilities. Kruse shows in \cite{Kruse1997} that people unable to hear are less unemployed (47.6\%) than people with difficulty in speaking understandably (67.6\%). Ruben concludes in \cite{Ruben2000} that communication disorders may cost the U.S. \$154-\$186 billion per year, which is equal to 2.5\%-3\% of the Gross National Product.
+In \cite{Ruben2000}, Robert Ruben predicts that communication disorders will be a major public health challenge for the 21st century. According to Ruben, the economic basis of American society has undergone fundamental changes. In the beginning of the last century, at least 80\% of the American labor force were employed in tasks that depended on manual habilities. However, at the end of the same century already 62\% of the American labor force work in jobs using skills based on their communication abilities and of the remaining 37\% which are defined as farming and blue collar, many are also dependent on their communication abilities, as farmers have become farm managers. In this scenario, communication disorders present a great disadvantage. It has been estimated that communication disorders have a prevalence of 5\% to 10\% and that people suffering from them are economically more disadvantaged than those with hearing loss or other disabilities. Kruse shows in \cite{Kruse1997} that people unable to hear are less unemployed (47.6\%) than people with difficulty in speaking understandably (67.6\%). Ruben concludes in \cite{Ruben2000} that communication disorders may cost the U.S. \$154-\$186 billion per year, which is equal to 2.5\%-3\% of the Gross National Product.
 
-As the ability to communicate effectively became an integral part of the fitness of a person, it is essential to increase allocation of resources to optimize the communication abilities of society as well as to invest in prevention and early detection of communication disorders. Prevention, diagnosis, and therapy of speech and language disorders are part of a speech and language therapist's (SLT's) job. In the following, speech and language pathologies will be presented as well as tools that SLTs use to perform their job.
+As the ability to communicate effectively became an integral part of the fitness of a person, it is essential to increase allocation of resources to optimize the communication abilities of society as well as to invest in prevention and early detection of communication disorders. Prevention, diagnosis, and therapy of speech and language disorders are part of a SLP's job. In the following, speech and language pathologies will be presented as well as tools that \glsplural{slp} use to perform their job.
 
 % ==================================================================
 \section{Speech and Language Disorders}
@@ -43,11 +45,11 @@ As the ability to communicate effectively became an integral part of the fitness
 
 \theoremstyle{definition}
 \begin{definition}{Speech-language pathology\\}
-Speech-language pathology services are those services necessary for the \textbf{diagnosis} and \textbf{treatment} of swallowing (dysphagia), speech-language, and cognitive-communication disorders that result in communication disabilities. Speech-language pathologists treat disorders of speech sound production (e.g., articulation, apraxia, dysarthria), resonance (e.g., hypernasality, hyponasality), voice (e.g., phonation quality, pitch, respiration), fluency (e.g., stuttering), language (e.g., comprehension, expression, pragmatics, semantics, syntax), cognition (e.g., attention, memory, problem solving, executive functioning), and feeding and swallowing (e.g., oral, pharyngeal, and esophageal stages). (Page 4 in \cite{SLPathologies})
+Speech-language pathology services are those services necessary for the \textbf{diagnosis} and \textbf{treatment} of swallowing (\gls{dysphagia}), speech-language, and cognitive-communication disorders that result in communication disabilities. Speech-language pathologists treat disorders of speech sound production (e.g., articulation, \gls{apraxia}, \gls{dysarthria}), resonance (e.g., hypernasality, hyponasality), voice (e.g., phonation quality, pitch, respiration), fluency (e.g., stuttering), language (e.g., comprehension, expression, pragmatics, semantics, syntax), cognition (e.g., attention, memory, problem solving, executive functioning), and feeding and swallowing (e.g., oral, pharyngeal, and esophageal stages). (Page 4 in \cite{SLPathologies})
 \label{def:SLP}
 \end{definition}
 
-SLPs diagnose and treat patients with voice, speech, language, and swallowing disorders (see above Def.\ref{def:SLP}). Communication disorders can be found in all age groups. It is estimated that 40 million Americans have communication disorders. In the following some detailed facts are listed \cite{SLPathologies}:
+\glsplural{slp} diagnose and treat patients with voice, speech, language, and swallowing disorders (see above Def.\ref{def:SLP}). Communication disorders can be found in all age groups. It is estimated that 40 million Americans have communication disorders. In the following some detailed facts are listed \cite{SLPathologies}:
 
 \begin{itemize}
 \item 6-8 million people in the United States (US) have some form of language impairment.
@@ -56,21 +58,21 @@ SLPs diagnose and treat patients with voice, speech, language, and swallowing di
 \item About 5\% of children have noticeable speech disorders by the first grade 
 \item Specific language impairment is one of the most common childhood disorders, affecting 7\%-8\% of children in kindergarten. 
 \item Approximately 7.5 million Americans have trouble using their voices.
-\item 1 million people in the US currently suffer from Parkinson’s disease, with an estimated 50,000-60,000 new cases diagnosed annually. 
-\item It is estimated that 89\% of individuals with Parkinson’s worldwide have a speech or voice disorder, but only 3\% to 4\% receive speech or voice treatment. 
-\item An estimated 300,000-600,000 people per year are affected by dysphagia resulting from neurologic disorders. 
-\item Each year an estimated 2.4 million individuals in the U.S. sustain a traumatic brain injury (TBI) and another 795,000 individuals sustain an acquired brain injury (ABI) from nontraumatic causes.
+\item 1 million people in the US currently suffer from \gls{pd}, with an estimated 50,000-60,000 new cases diagnosed annually. 
+\item It is estimated that 89\% of individuals with \gls{pd} worldwide have a speech or voice disorder, but only 3\% to 4\% receive speech or voice treatment. 
+\item An estimated 300,000-600,000 people per year are affected by \gls{dysphagia} resulting from neurologic disorders. 
+\item Each year an estimated 2.4 million individuals in the U.S. sustain a \gls{tbi} and another 795,000 individuals sustain an acquired brain injury (ABI) from nontraumatic causes.
 \end{itemize}
 
-The listed communication disorders can have different etiologies. Communication disorders can be caused by neonatal problems (e.g., prematurity, low birth weight, substance exposure) or developmental disabilities (e.g., specific language impairment, autism spectrum disorder, dyslexia, attention deficit/hyperactive disorder). Also oral anomalies (e.g., cleft lip/palate, dental malocclusion, macroglossia, oral-motor dysfunction) and neurological diseases/dysfunctions (e.g., traumatic brain injury, cerebral palsy, cerebral vascular accident, dementia, Parkinson's disease, amyotrophic lateral sclerosis) can cause several communication problems.
+The listed communication disorders can have different etiologies. Communication disorders can be caused by neonatal problems (e.g., prematurity, low birth weight, substance exposure) or developmental disabilities (e.g., specific language impairment, autism spectrum disorder, dyslexia, attention deficit/hyperactive disorder). Also oral anomalies (e.g., cleft lip/palate, dental malocclusion, macroglossia, oral-motor dysfunction) and neurological diseases/dysfunctions (e.g., \gls{tbi}, \gls{cp}, cerebral vascular accident, dementia, \gls{pd}, \gls{als}) can cause several communication problems.
 
-Especially progressive neurological diseases and disorders of the brain can have a huge impact on communication abilities. Alzheimer's disease is one of the most common forms of dementia and its progression is approximately 10 years. This disease mainly affects people after the age of 60 and is usually diagnosed when two or more functions are affected, e.g. cognition and language which are the first to impaired. Communication problems that are associated with Alzheimer's disease are apraxia of speech, dysarthria (most commonly hypokinetic dysarthria) \todo{include definition in glossary} and word finding difficulties. The expressive language skill maybe intact, but their verbalisations become confused or out of context and with the progression of the disease their understanding becomes poorer and some patients even become speechless or unresponsive. Some patients with Alzheimer's disease also become emotional or particularly depressed. \cite{communicationDifficulties} 
+Especially progressive neurological diseases and disorders of the brain can have a huge impact on communication abilities. \gls{ad} is one of the most common forms of dementia and its progression is approximately 10 years. This disease mainly affects people after the age of 60 and is usually diagnosed when two or more functions are affected, e.g. cognition and language which are the first to impaired. Communication problems that are associated with \gls{ad} are \gls{apraxia} of speech, \gls{dysarthria} (most commonly hypokinetic dysarthria) \todo{include definition in glossary} and word finding difficulties. The expressive language skill maybe intact, but their verbalisations become confused or out of context and with the progression of the disease their understanding becomes poorer and some patients even become speechless or unresponsive. Some patients with \gls{ad} also become emotional or particularly depressed. \cite{communicationDifficulties} 
  
-Parkinson's Disease is also a progressive neurological disease which has increased in incidence, as did longevity. First symptoms include disordered speech and swallowing difficulties and usually appear after the age of 50. A common speech problem is dysarthria which may be caused by a combination of problems with respiration, phonation, resonance, prosody, and articulation. All of these factors result in a decerase in intelligibility. Dysphonia may occur which leads to a weak voice. For patients it can be difficult to finish sentences and due to changes in manner and place of articulation the articulation of consonants can become disordered. Some people with Parkinson's experience pailalia where words follow each other at a rapid speed and some phrases are repeated continuously. Speech may become monotonous and some patients experience difficulties with resonance, caused by a rigid palate and failure to close the nasopharynx leading to hyper nasality.\cite{communicationDifficulties}
+\gls{pd} is also a progressive neurological disease which has increased in incidence, as did longevity. First symptoms include disordered speech and swallowing difficulties and usually appear after the age of 50. A common speech problem is \gls{dysarthria} which may be caused by a combination of problems with respiration, phonation, resonance, prosody, and articulation. All of these factors result in a decerase in intelligibility. Dysphonia may occur which leads to a weak voice. For patients it can be difficult to finish sentences and due to changes in manner and place of articulation the articulation of consonants can become disordered. Some people with \gls{pd} experience pailalia where words follow each other at a rapid speed and some phrases are repeated continuously. Speech may become monotonous and some patients experience difficulties with resonance, caused by a rigid palate and failure to close the nasopharynx leading to hyper nasality.\cite{communicationDifficulties}
 
-Another neurological disease that can appear between the ages of 20 to 40 years is Multiple Sclerosis (MS). Severe symtpoms can follow this disease but the majority of patients with MS continue to live active lifes. However, around 50\% of MS patients have speech difficulties, and dysarthria is common. 
-Problems with prosody, phonation and articulation can occur as well as harsh or breathy voice and difficulties with control of pitch, rate, and volume. It is estimated that around 50\% of people with MS have difficulties with
-articulation and 25\% have some form of hypernasality. Some strategies to improve communication following a diagnosis of MS include breath exercises to improve volume and sentence length as well as speech muscle exercises to improve dyarthric speech. \cite{communicationDifficulties}
+Another neurological disease that can appear between the ages of 20 to 40 years is \gls{ms}. Severe symtpoms can follow this disease but the majority of patients with \gls{ms} continue to live active lives. However, around 50\% of \gls{ms} patients have speech difficulties, and \gls{dysarthria} is common. 
+Problems with prosody, phonation and articulation can occur as well as harsh or breathy voice and difficulties with control of pitch, rate, and volume. It is estimated that around 50\% of people with \gls{ms} have difficulties with
+articulation and 25\% have some form of hypernasality. Some strategies to improve communication following a diagnosis of \gls{ms} include breath exercises to improve volume and sentence length as well as speech muscle exercises to improve dyarthric speech. \cite{communicationDifficulties}
 
 
 
@@ -140,7 +142,7 @@ sound measuring apparatus/ decibel meter: electroglottograph (EGG), laryngograph
 
 stroboscopes: diagnostic stroboscopes, video stroboscopes
 
-tablet computer: tablets are engaging, portable, affordable, multifunctional, apps designed for SLT
+tablet computer: tablets are engaging, portable, affordable, multifunctional, apps designed for \gls{slp}
 
 AAC, or augmentative and alternative communication, is a series of interventions used to help children with severe communication disorders communicate. Many apps are designed based on this method of therapy.
 
@@ -188,6 +190,14 @@ Text to Speech – Universal Reader by Premiere Assistive Technology
 \section{Speech Production Anatomy}
 For verbal communication besides tongue, larynx, pharynx, and soft palate muscles, which are not visible from the exterior, also lip and mandibular muscles are crucial (orbicularis oris: close lips, levator labii superioris: raise upper lip, more in \cite{PhonManual}). 
 Malfunction of these muscles can be caused by neurological or motoric problems, causing f.ex. speech disorders or facial paralysis. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{Anatomy-of-Speech-Graphic}
+    \caption{Speech production Anatomy.}
+    \label{fig:speechmuscles}
+\end{figure}
+
 
 % ==================================================================
 
