@@ -13,9 +13,8 @@ As described in the introductory chapter, face expression analysis is an interdi
 
 This chapter starts by explaining the importance of communication nowadays and the communication problems that exist in our societies, why communication skills are gaining more and more importance, not only on a personal level but also on an economical level and how \glsplural{slp} work to prevent, diagnose and treat speech and language disorders.
 
-In chapter~\ref{sec:anatomy} an overview of the anatomy essential to communicate verbally as well as non-verbally is presented. Based on the facial muscle activity during speech and facial expressions, in chapter~\ref{sec:compRepresentation} non-invasive methods are shown to detect facial activity using images from different modalities, such as RGB, thermal, and depth cameras.
+In chapter~\ref{sec:speechAnatomy} and \ref{sec:faceAnatomy} an overview of the anatomy essential to communicate verbally as well as non-verbally is presented. Given the multimodality of communication, in chapter~\ref{sec:compcommunication} non-invasive methods are shown to detect facial activity as well as blood flow and other communication properties.
 
-In the end of this chapter, applications of face analysis in medicine will be presented.\todo{last chapter leave here or in chap 3?} 
 
 
 % ==================================================================
@@ -166,6 +165,7 @@ Text to Speech – Universal Reader by Premiere Assistive Technology
 
 
 \section{Speech Production Anatomy}
+\label{sec:speechAnatomy}
 Speech production is a complex interplay of different muscles and organs. Speech production starts in the brain where different regions interact to control the speech processes. Thoughts are translated into linguistic representations which are then sent to speech mechanisms that coordinate, initiate, modify and execute the articulation of an utterance \cite{Dronkers2004}. By studying patients with different disorders which affect this complex process it was possible to discover the numerous brain areas involved in speech production. The harmonic interaction of those areas can easily be affected by neurological diseases and dysfunctions. 
 
 The coordination of articulatory movements involves different components such as \textit{articulators} (lips, tongue, teeth, jaw, hard and soft palate (velum)) used to vary the vocal cavity, \textit{resonating cavities} (nasal, oral, pharyngeal and soft palate) used to select and suppress overtones, \textit{the larynx and vocal chords} to produce sound waves and the \textit{lower respiratory tract} (trachea, lungs, diaphragm, bronchus, and bronchial tubes) necessary to supply the breath stream (see Fig.~\ref{fig:speechmuscles})\cite{PhonManual}. 
@@ -184,7 +184,7 @@ For correct sound production lips, tongue, jaw, velum and larynx must make accur
 % ==================================================================
 
 \section{Facial Muscles}
-\label{sec:anatomy}
+\label{sec:faceAnatomy}
 
 The human face is composed by 43 muscles. Without them we would be missing an important tool for communicating not only with people from our cultural environment but also with people from different provenience as the only way to be understood would be through gestures. Our facial muscles are essential for both, verbal and non-verbal communication.\par 
 
@@ -211,6 +211,7 @@ In order to taxonomize human facial movements accordingly to their appearance on
 % ==================================================================
 
 \section{Computational Communication Analysis }
+\label{sec:compcommunication}
 
 As communication is a multimodal activity, different modalities are necessary to analyze communication from a computational perspective. In Table~\ref{tab:modality} several modalities which can be used to collect data and analyze communication properties are listed. Audio data permits the analysis of speech sounds, voice prosody and other paralinguistic characteristics, as well as speech recognition which is focused on understanding the meaning of what is said. RGB data is used to detect \gls{au} and underlying emotions. Important for non-verbal communication is oculesics analysis (e.g., pupil dilation and eye movements) which can be indicators of attention and arousal. Thermal imaging can provide information of airflow and blood flow. The latter can be used as indicator of emotions such as momentary stress (increased the periorbital blood flow) and joy (decreased blood flow to the nose)\cite{Corneanu2016survey}. Depth information is specially useful when the face cannot be recorded frontally to detect facial expressions. \gls{eeg} can also be used to measure arousal and valence of certain emotions. \gls{eda} measures skin conductance (sweat) which has been shown to be an indicator for stress, anxiety, and has been used as well for clinical assessment of pain and schizophrenia \cite{Chen2015wavelet}.
 
