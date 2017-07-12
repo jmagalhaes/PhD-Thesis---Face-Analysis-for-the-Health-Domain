@@ -1,0 +1,50 @@
+\chapter{Datasets}
+\label{app:datasets}
+
+
+
+\begin{sidewaystable}
+\centering
+\caption{Non-comprehensive list of RGB datasets for \gls{fe} recognition adapted from \cite{Corneanu2016survey}.}
+\label{tab:rgbDatasets}
+\resizebox{!}{.2\paperwidth}{%
+\begin{tabular}{l p{3cm} ccccccccccc}
+\toprule
+                          &                                         & \multicolumn{11}{c}{\textbf{RGB}}                                                                      \\ \cmidrule{3-13}
+                          &                                         & \textbf{CK+}   & \textbf{MPIE}     & \textbf{JAFFE} & \textbf{MMI}   & \textbf{RU\_FACS} & \textbf{SEMAINE} & \textbf{CASME}  & \textbf{DISFA} & \textbf{AFEW}  & \textbf{SFEW} & \textbf{AMFED} \\ \midrule
+\multirow{2}{*}{\textbf{Content}}                   & Intention \footnotesize{(\textbf{P}osed/\textbf{S}pontaneous)}   & P     & P        & P     & P     & S        & S       & S      & S     & S     & S    & S     \\
+                   & Temporality \footnotesize{(\textbf{S}tatic/\textbf{D}ynamic)}    & D     & S        & S     & D     & D        & D       & D      & D     & D     & S    & D     \\ \midrule
+\multirow{4}{*}{\textbf{Capture}}  & Environment \footnotesize{(\textbf{L}ab/in the \textbf{W}ild)} & L     & L        & L     & L     & L        & L       & L      & L     & N     & N    & N     \\
+                          & \parbox[t]{3cm}{Multiple\\ Perspective}                    & no    & yes      & no    & yes   & yes      & no      & no     & no    & yes   & yes  & yes   \\
+                          & \parbox[t]{3cm}{Multiple\\ Illumination}                   & no    & yes      & no    & yes   & no       & no      & no     & no    & yes   & yes  & yes   \\
+                          & Occlusions                              & no    & yes      & no    & no    & yes      & no      & no     & no    & yes   & yes  & yes   \\ \midrule
+\multirow{4}{*}{\textbf{Subjects}} & \# of subjects                          & 201   & 337      & 10    & 75    & 100      & 150     & 35     & 27    & 220   & 68   & 5268  \\
+                          & Ethnic Diverse                          & yes   & yes      & no    & yes   & no       & no      & no     & yes   & yes   & yes  &       \\
+                          & Gender \footnotesize{(M/F(\%))}               & 31/69 & 70/30    & 100/0 & 50/50 & -        & 62/38   & 37/63  & 44/56 & -     & -    & 58/42 \\
+                          & Age                                     & 18-50 & $\mu=27.9$ & -     & 19-62 & 18-30    & 22-60   & $\mu=22$ & 18-50 & 18-70 & -    & -     
+\end{tabular}}
+\end{sidewaystable}
+
+
+
+\begin{sidewaystable}[]
+\centering
+\caption{Non-comprehensive list of 3D and thermal datasets for \gls{fe} recognition adapted from \cite{Corneanu2016survey}.}
+\label{tab:3DThermaldatasets}
+\begin{tabular}{llcccccccc}
+\toprule
+                          &                                         & \multicolumn{4}{c}{\textbf{3D}}                & \multicolumn{4}{l}{\textbf{RGB+Thermal}} \\ \cmidrule(l){3-6}\cmidrule(l){7-10} 
+                          &                                         & \textbf{BU-3DFE} & \textbf{BU-4DFE} & \textbf{Bosphorus} & \textbf{BP4D}  & \textbf{IRIS}  & \textbf{NIST}  & \textbf{NVIE}   & \textbf{KTFE}   \\ \midrule
+\multirow{2}{*}{\textbf{Content}}  & Intention \footnotesize{(\textbf{P}osed/\textbf{S}pontaneous)}   & P       & P       & P         & S     & P     & P     & S/P    & S/P    \\
+                          & Temporality \footnotesize{(\textbf{S}tatic/\textbf{D}ynamic)}    & S       & D       & S         & D     & S     & S     & D      & D      \\ \midrule
+\multirow{4}{*}{\textbf{Capture}}  & Environment \footnotesize{(\textbf{L}ab/in the \textbf{W}ild)} & L       & L       & L         & L     & L     & L     & L      & L      \\
+                          & Multiple Perspective                    & yes     & yes     & -         & yes   & yes   & yes   & yes    & yes    \\
+                          & Multiple Illumination                   & no      & no      & no        & no    & yes   & yes   & yes    & yes    \\
+                          & Occlusions                              & yes     & no      & yes       & no    & yes   & yes   & yes    & yes    \\ \midrule
+\multirow{4}{*}{\textbf{Subjects}} & \# of subjects                          & 100     & 101     & 105       & 41    & 30    & 90    & 215    & 26     \\
+                          & Ethnic Diverse                          & yes     & yes     & no        & yes   & yes   & -     & no     & no     \\
+                          & Gender \footnotesize{(M/F(\%))}              & 56/44   & 57/43   & 43/57     & 56/44 & -     & -     & 27/73  & 38/62  \\
+                          & Age                                     & 18-70   & 18-45   & 25-35     & 18-29 & -     & -     & 17-31  & 12-32 
+\end{tabular}
+\end{sidewaystable}
+

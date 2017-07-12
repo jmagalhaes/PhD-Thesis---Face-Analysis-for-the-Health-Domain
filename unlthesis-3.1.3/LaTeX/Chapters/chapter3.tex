@@ -12,29 +12,50 @@
 % ==================================================================
 \section{Face Analysis}
 
-\subsection{Application}
+In computer vision several methods have been developed to detect human faces \todo{add citations} which then led to the recognition of faces \todo{Viola cite}. With the introduction of the term Affective Computing in 1995 by Rosalind Picard the interest in recognizing affect through image analysis of \glspl{fe} grew \cite{Huang2010}. Paul Ekman gave an essential contribution for this research by creating a taxonomy for \glspl{fe} named \gls{facs} \cite{Ekman1977}. In \cite{Ekman1997} he related combinations of facial actions with emotions. \gls{facs} are still part of the state-of-the-art being combined with, for example, deep learning \cite{Jaiswal2016}.
 
-In computer vision several methods have been developed to detect human faces \todo{add citations} which then led to the recognition of faces \todo{Viola cite}. With the introduction of the term Affective Computing in 1995 by Rosalind Picard first published the term affective computing the interest in recognizing affect through image analysis of facial expressions grew \cite{Huang2010}. Paul Ekman gave an essential contribution for this research by creating a taxonomy for facial expressions named facial action coding system (FACS) \cite{Ekman1977}. In \cite{Ekman1997} he related combinations of facial actions with emotions. FACS are still part of the state-of-the-art being combined with, for example, deep learning \cite{Jaiswal2016}.
 
-The detection of emotions has several applications but recently it gained more and more interest in the research community for use in Behaviomedics\cite{Valstar2014automatic}. The analysis of emotions using video data is used to detect mental disorders, such as stress, anxiety, and depression \cite{Holt2016} \cite{Valstar2014automatic} \cite{Valstar2016avec}\cite{Valstar2014avec}. 
+\begin{figure}
+    \centering
+    \includegraphics[width=14cm]{FEdetectiondiagram}
+    \caption{Steps necessary for \gls{fe} recognition.}
+    \label{fig:FEdiagram}
+\end{figure}
 
-Face analysis has also been applied to diagnosis of eating disorders \cite{Leppanen2017} and estimate pain intensity \cite{Valstar2014automatic} using, for instance, recurrent CNNs \cite{Zhou2016}, 
 
-Also neurodegenerative diseases such as Parkinson's Disease \cite{Almutiry2016} \cite{Bandini2017}\cite{Silverdale2016} and Alzheimer's Disease have been studied using facial expression analysis. Deficits in the mimicry of facial expressions were detected by \cite{Livingstone2016} and \cite{Ricciardi2015} confirmed reduced facial expressions.
-Parkinson's Disease \cite{Almutiry2016} \cite{Bandini2017}. In \cite{Cadieux1997} 
-emotion processing in Alzheimer's disease was studied and in \cite{Gola2017} it was shown that patients suffer deficits in the ability to intentionally imitate facial expressions of emotion.
 
-Also autism has been studied by classifying FE based on video data \cite{Valstar2014automatic} as this disorder causes difficulty in reading faces and show deficits in non-verbal as well as in verbal communication.
+\gls{afer} is an interdisciplinary domain in which researchers from behavioural science, neurology, psychology, and computer science investigate the recognition of facial expressions which can give us insights about the emotional state of a person.
+
+\begin{figure}
+{\footnotesize
+\begin{forest}
+    for tree={
+      edge path={
+        \noexpand\path [draw, thick, \forestoption{edge}] (!u.parent anchor) -- +(5pt,0) |- (.child anchor)\forestoption{edge label};
+      },
+      parent anchor=east,
+      child anchor=west,
+      grow'=east,
+      text centered,
+      minimum width=1in,
+      text width=2.4cm
+      }
+ [Automatic\\  Facial\\ Expression Recognition [Parametrization [Descriptive] [Judgement]] [Recognition [Face \\ localization [Detection] [Segmentation]] [Face \\ registration] [Feature \\ extraction [Predesigned [Appearance][Geometry][Appearance + Geometry]][Learned]] [Expression\\ Classification /Regression [Categorical] [Continuous]] [Multimodal \\fusion [Direct fusion][Early fusion][Late fusion] [Sequential]]]]
+  \end{forest}
+}
+\caption{Taxonomy for AFER adapted from \cite{Corneanu2016survey}.}
+\label{fig:AFER}
+\end{figure}
 
 \subsection{Techniques used in different modalities}
 
 
 
 
-AAM for FACS recognition \cite{Lucey2007}\\
+\gls{aam} for \gls{facs} recognition \cite{Lucey2007}\\
 
 
-AU detection with SVM\cite{Simon2010}, recognizing AU \cite{Tian2001}\\
+\gls{au} detection with \gls{svm}\cite{Simon2010}, recognizing AU \cite{Tian2001}\\
 
 temporal analysis of Facial action unit detection \cite{Valstar2006}\\
 
@@ -73,20 +94,10 @@ using different modalities (rgb, 3d, thermal)\cite{Corneanu2016survey}
 
 
 
-
-\subsection{Datasets}
-
-see corneanu table 1 and 2 with datasets for different modalities.
+An overview of available datasets can be found in Appendix~\ref{app:datasets}.
 
 
-Thermal + RGB : IRIS, NIST/Equinox, NVIE, KTFE
-\textbf{HUMAINE Database:} 
-This is a the HUMAINE database which became available at the end of 2007. It consists of an exemplar set of 50 clips from naturalistic and induced data showing a range of modalities and emotions, and a subset of 16 clips selected to cover a balanced sample of emotional behaviour in a range of contexts. This subset is labelled. \url{http://humaine-db.sspnet.eu/}\\
-
-
-evolution of the FE recognition databases \cite{Roychowdhury2015survey}\\
-
-
+%--------------------------------------------------------
 \subsection{Available APIs for face analysis}
 
 \textbf{Healthcare:} 
@@ -114,6 +125,23 @@ Quote:OpenFace is a Python and Torch implementation of face recognition with dee
 \textbf{InSight} by Sightcorp is a facial expression analysis API and is also used for eye tracking, age and gender estimation, head pose estimation, etc. 2 weeks free trial.
 \url{http://sightcorp.com/insight/}\\
 
+
+
+
+%--------------------------------------------------------
+\subsection{Application}
+
+The detection of emotions has several applications but recently it gained more and more interest in the research community for use in \gls{behaviomedics}\cite{Valstar2014automatic}. The analysis of emotions using video data is used to detect mental disorders, such as stress, anxiety, and depression \cite{Holt2016,Valstar2014automatic,Valstar2016avec,Valstar2014avec}. 
+
+Face analysis has also been applied to diagnosis of eating disorders \cite{Leppanen2017} and estimate pain intensity \cite{Valstar2014automatic} using, for instance, recurrent \glspl{cnn} \cite{Zhou2016}. 
+
+Also neurodegenerative diseases such as Parkinson's Disease \cite{Almutiry2016,Bandini2017,Silverdale2016} and Alzheimer's Disease have been studied using facial expression analysis. Deficits in the mimicry of facial expressions were detected by \cite{Livingstone2016} and \cite{Ricciardi2015} confirmed reduced facial expressions.
+Parkinson's Disease \cite{Almutiry2016,Bandini2017}. In \cite{Cadieux1997} 
+emotion processing in Alzheimer's disease was studied and in \cite{Gola2017} it was shown that patients suffer deficits in the ability to intentionally imitate facial expressions of emotion.
+
+Also autism has been studied by classifying FE based on video data \cite{Valstar2014automatic} as this disorder causes difficulty in reading faces and show deficits in non-verbal as well as in verbal communication.
+
+%--------------------------------------------------------
 
 \subsection{Challenges}
 challenges: face pose FERA2017 \cite{Valstar2017}
