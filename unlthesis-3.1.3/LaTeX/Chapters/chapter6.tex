@@ -9,37 +9,30 @@
 \acresetall
 
 \paragraph{Task I - Create a baseline using existing datasets for multimodal analysis.}
-Given the existing datasets shown in chapter~\ref{cha:stateofart}, the RECOLA dataset will be used to create a baseline as it consists of video as well as physiological data which is labeled with emotions and facial expressions.
-\todo{add second dataset}
+By using existing datasets (See Appendix~\ref{app:datasets} and chapter~\ref{subsec:multiDatasets}), a multimodal framework will be developed to relate data from different modalities. For that purpose different toolboxes (see chapter~\ref{sec:sensorsFeatures}) will be used to extract features from the different modalities and different data fusion methods will be explored. The different algorithms to extract features as well as to fuse the data will be integrated in one framework in order that it can be applied on various multimodal datasets to evaluate the performance of the system in different conditions.
 
-\paragraph{Task IIa - Define a setup and experimental protocol and collect data from healthy and stuttering adults.}
-Cooperation will be searched with the Stuttering Center of Pennsylvania which is located in Pittsburgh, to define the experimental protocol consulting a Speech and Language Therapist and to collect data from stutterers. Given the age group of the stutterers, voluntary subjects in the same age range will be recorded as control group.
+\paragraph{Task II - Define a setup and experimental protocol and collect data from \gls{pws} or patients with \gls{pd} or \gls{ad} suffering \gls{dysarthria} or \gls{apraxia}, as well as from healthy adults as control group.}
+Cooperation will be searched with experts mentioned in chapter~\ref{sec:experts} to define the experimental protocol and have access to patients. Voluntary subjects in the same age range will be recorded as control group.
 
-\paragraph{Task IIb - Unimodal and multimodal analysis of the data collected from healthy subjects and stutterers.} Each modality will be analyzed separately as well as fused together. Hand-crafted features will be tested. The correlation of disfluencies detected through video and audio analysis and the emotional state measured through the EDA will be anaylzed.
+\paragraph{Task III - Unimodal and multimodal analysis of the data collected} The framework developed in \textbf{Task I} will be used to analyze the collected data. Each modality will be analyzed separately as well as fused together (possible methods in chapter~\ref{sec:sensorsFeatures}). Obtained insights can be used to develop new algorithms in order to improve the mapping of visible facial muscle activity to correct/incorrect execution of speech exercises. The correlation of speech errors detected through video and audio analysis and the emotional inner state measured through \gls{eda} will be computed as well as correlation between the facial expressiveness and emotional inner state. 
 
-\paragraph{Task IIc - Analyze influence of emotional biofeedback in stutter therapy over time.} Existing therapy exercises will be combined with emotional biofeedback. Given the insights from \textbf{Task 3}, the modalities which gather most information   will be used to collect data during several therapy sessions. As the collected data will represent the progress over time, a mathematical framework will be developed to represent the evolution over time.
+\begin{comment}
+\paragraph{Task IV - Analyze influence of emotional biofeedback in stutter therapy over time.} Existing therapy exercises will be combined with emotional biofeedback. Given the insights from \textbf{Task IIb}, the modalities which gather most information will be used to collect data during several therapy sessions. As the collected data will represent the progress over time, a mathematical framework will be developed to represent the evolution over time. This representation can be used to develop a measurement of the benefit the therapy provides.
+\end{comment}
 
-\paragraph{Task IIIa - Define a setup and experimental protocol to collect data from subjects suffering dysarthria and apraxia of speech.} 
-Cooperation will be searched with the Department of Neurology  from the University of Pittsburgh, to define the experimental protocol consulting a Speech and Language Therapist and to collect data from patients suffering dysarthria and apraxia of speech caused by an underlying neurodegenerative disease. 
+\paragraph{Task IV - Collect data during therapy sessions to analyze data over time.} Depending on the outcomes obtained in \textbf{Task III} patients can be accompanied during conventional therapy or a new therapy can be developed using emotional biofeedback, based on prior outcomes.
 
-\paragraph{Task IIIb - Unimodal and multimodal analysis of the data collected from subjects suffering dysarthria and apraxia of speech.}
-Each modality will be analyzed separately as well as fused together. Hand-crafted features will be tested. The degree of emotional expressiveness detected through video and audio analysis and the emotional state measured through the EDA will be anaylzed.
-
-
+\paragraph{Task V - Analyze collected data over time.} Adapt multimodal framework to analyze data over time.
 
 
 \begin{figure}
-\centering
-\subbottom[]{
-\includegraphics[width=13cm]{TimePlan1.pdf}}
-\subbottom[]{
-\includegraphics[width=15cm]{TimePlan2.pdf}}
-\subbottom[]{
-\includegraphics[width=13cm]{TimePlan3.pdf}}
-\subbottom[]{
-\includegraphics[width=13cm]{TimePlan4.pdf}}
-\caption{Gantt chart showing the described tasks planned from August 2017 to December 2020.}
+    \centering
+    \includegraphics[width=14cm]{ganttChart}
+    \caption{Time Plan for 2017-2021.}
+    \label{fig:timePlan}
 \end{figure}
+
+
 
 
 

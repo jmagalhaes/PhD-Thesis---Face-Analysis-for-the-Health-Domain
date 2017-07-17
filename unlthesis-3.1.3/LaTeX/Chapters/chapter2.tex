@@ -9,11 +9,9 @@
 \acresetall
 
 
-As described in the introductory chapter, face expression analysis is an interdisciplinary research area. To permit the reader a better understanding of the state-of-the-art, this chapter covers fundamental knowledge of the different research areas involved in this project. 
+As was mentioned in the introduction, communication is essential to our lives. In this chapter the concept and complexity of communication will be explained. Given the shift from manual to service-related labor which often requires communication skills, the importance of it not only on a personal level but also on an economical level will be elaborated. As lack of communication skills is often caused by speech disorders some of them will be presented, especially those caused by neurodegenerative disorders, as they affect speech motor control.
 
-This chapter starts by explaining the importance of communication nowadays and the communication problems that exist in our societies, why communication skills are gaining more and more importance, not only on a personal level but also on an economical level and how \glspl{slp} work to prevent, diagnose and treat speech and language disorders.
-
-In chapter~\ref{sec:speechAnatomy} and \ref{sec:faceAnatomy} an overview of the anatomy essential to communicate verbally as well as non-verbally is presented. Given the multimodality of communication, in chapter~\ref{sec:compcommunication} non-invasive methods are shown to detect facial activity as well as blood flow and other communication properties.
+To understand the complexity of speech production as well as of facial expressions, in chapter~\ref{sec:speechAnatomy} and \ref{sec:faceAnatomy} an overview of the anatomy essential to communicate verbally and non-verbally is presented. 
 
 
 
@@ -74,8 +72,8 @@ Problems with prosody, phonation and articulation can occur as well as harsh or 
 articulation and 25\% have some form of hypernasality. Some strategies to improve communication following a diagnosis of \gls{ms} include breath exercises to improve volume and sentence length as well as speech muscle exercises to improve dyarthric speech. \cite{communicationDifficulties}
 
 
-A speech disorder which is often misunderstood and stigmatized by society is \gls{stuttering}. \gls{pwd} are frequently stereotyped as deficient in verbal communication, as less intelligent or as fearful, shy or anxious. Although these prejudices are not justified, the mere awareness of stigmatizing public attitudes is related to significantly higher levels of anxiety and depression among adults who stutter \cite{Boyle2016}. The anticipation of negative reactions due to stuttering can result in avoidance of speaking and such affect quality of life, self-confidence and the ability to achieve life goals. Unfortunately, a therapy that helps overcome stuttering in all cases, does not exist. On some children stuttering disappears without therapy and on others stuttering accompanies them their whole life. Although much has been learned through brain imaging about the neural underpinnings of stuttering, little research has thus far contributed to the advancement of stuttering treatments~\cite{Ingham2017}.
-It is yet not known what makes a person stutter on a particular word or utterance as well as which measures are most important when evaluating stuttering and what the most reliable way to obtain these measures is. Therefore it is difficult to document improvements in a treatment properly especially when many of the changes are "under the surface" (e.g., changes in feelings or attitudes toward speaking). It is also still a challenge to determine what type of treatment is best for a specific individual who stutters. Current treatments for \gls{pwd} search a balance between helping speakers improve their fluency through changes to speech production ("speech modification" techniques) and helping speakers improve their attitudes and feelings about stuttering to reduce the severity of stuttering ("stuttering modification" techniques) as there has been found a relationship between stutter severity and emotional stress \cite{Choi2016,Smith2017,Vanryckeghem2001,Alm2015}. 
+A speech disorder which is often misunderstood and stigmatized by society is \gls{stuttering}. \gls{pws} are frequently stereotyped as deficient in verbal communication, as less intelligent or as fearful, shy or anxious. Although these prejudices are not justified, the mere awareness of stigmatizing public attitudes is related to significantly higher levels of anxiety and depression among adults who stutter \cite{Boyle2016}. The anticipation of negative reactions due to stuttering can result in avoidance of speaking and such affect quality of life, self-confidence and the ability to achieve life goals. Unfortunately, a therapy that helps overcome stuttering in all cases, does not exist. On some children stuttering disappears without therapy and on others stuttering accompanies them their whole life. Although much has been learned through brain imaging about the neural underpinnings of stuttering, little research has thus far contributed to the advancement of stuttering treatments~\cite{Ingham2017}.
+It is yet not known what makes a person stutter on a particular word or utterance as well as which measures are most important when evaluating stuttering and what the most reliable way to obtain these measures is. Therefore it is difficult to document improvements in a treatment properly especially when many of the changes are "under the surface" (e.g., changes in feelings or attitudes toward speaking). It is also still a challenge to determine what type of treatment is best for a specific individual who stutters. Current treatments for \gls{pws} search a balance between helping speakers improve their fluency through changes to speech production ("speech modification" techniques) and helping speakers improve their attitudes and feelings about stuttering to reduce the severity of stuttering ("stuttering modification" techniques) as there has been found a relationship between stutter severity and emotional stress \cite{Choi2016,Smith2017,Vanryckeghem2001,Alm2015}. 
 
 \begin{comment} 
 \section{Diagnosis and Therapy of Speech and Language Pathologies}
@@ -209,33 +207,6 @@ In order to taxonomize human facial movements accordingly to their appearance on
 \end{figure}
 
 % ==================================================================
-
-\section{Computational Communication Analysis }
-\label{sec:compcommunication}
-
-As communication is a multimodal activity, different modalities are necessary to analyze communication from a computational perspective. In Table~\ref{tab:modality} several modalities which can be used to collect data and analyze communication properties are listed. Audio data permits the analysis of speech sounds, voice prosody and other paralinguistic characteristics, as well as speech recognition which is focused on understanding the meaning of what is said. RGB data is used to detect \gls{au} and underlying emotions. Important for non-verbal communication is oculesics analysis (e.g., pupil dilation and eye movements) which can be indicators of attention and arousal. Thermal imaging can provide information of airflow and blood flow. The latter can be used as indicator of emotions such as momentary stress (increased the periorbital blood flow) and joy (decreased blood flow to the nose)\cite{Corneanu2016survey}. Depth information is specially useful when the face cannot be recorded frontally to detect facial expressions. \gls{eeg} can also be used to measure arousal and valence of certain emotions. \gls{eda} measures skin conductance (sweat) which has been shown to be an indicator for stress, anxiety, and has been used as well for clinical assessment of pain and schizophrenia \cite{Chen2015wavelet}.
-
-
-\begin{table}
-\centering
-\caption{Overview of different modalities and what communication properties they analyze.}
-\label{tab:modality}
-\begin{tabular}{l|l}
-\toprule
-\textbf{Modality}      & \textbf{Communication properties}                 \\ \midrule
-\multirow{2}{*}{Audio} & voice analysis (study of speech sounds)           \\
-                       & speech recognition (study of linguistic contents) \\ \midrule
-\multirow{3}{*}{RGB}   & facial expression detection                       \\
-                       & gaze analysis                                     \\
-                       & pupil dilation                                    \\ \midrule
-Thermal                & airflow                                           \\
-                       & blood flow                                        \\ \midrule
-Depth                  & facial expression detection                       \\ \midrule
-\multirow{2}{*}{EEG}   & arousal                                           \\
-                       & valence                                           \\ \midrule
-EDA                    & skin conductance                                 
-\end{tabular}
-\end{table}
 
 
 
